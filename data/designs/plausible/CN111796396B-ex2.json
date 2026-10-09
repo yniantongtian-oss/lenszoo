@@ -1,0 +1,318 @@
+{
+ "schema_version": "0.1",
+ "id": "CN111796396B-ex2",
+ "source": {
+  "patent": "CN111796396B",
+  "url": "https://patents.google.com/patent/CN111796396B/zh",
+  "title": "Optical imaging lens and lens group thereof",
+  "assignee": "Ningbo Sunny Automotive Optech Co Ltd",
+  "date": "2022-03-04",
+  "embodiment": 2,
+  "table": "Table 10",
+  "pdf_url": "https://patentimages.storage.googleapis.com/03/68/3f/87b86542b248c9/CN111796396B.pdf"
+ },
+ "claimed": {
+  "ttl": 16.96
+ },
+ "wavelengths_um": [
+  0.4861327,
+  0.5875618,
+  0.6562725
+ ],
+ "primary_wavelength_um": 0.5875618,
+ "surfaces": [
+  {
+   "name": "OBJ",
+   "radius": "inf",
+   "thickness": "inf",
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "object"
+  },
+  {
+   "name": "S1D",
+   "radius": 8.3842,
+   "thickness": 1.0,
+   "nd": 1.62,
+   "vd": 58.1,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S2D",
+   "radius": 2.6414,
+   "thickness": 2.3,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S3D",
+   "radius": -3.6897,
+   "thickness": 0.55,
+   "nd": 1.5,
+   "vd": 81.61,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S4D",
+   "radius": 6.9074,
+   "thickness": 0.0,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "SS5D",
+   "radius": 6.9074,
+   "thickness": 2.4396,
+   "nd": 1.9,
+   "vd": 31.32,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S6D",
+   "radius": -10.5656,
+   "thickness": 0.042,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "STO",
+   "radius": "inf",
+   "thickness": 0.2,
+   "conic": 0.0,
+   "is_stop": true,
+   "role": "stop"
+  },
+  {
+   "name": "S7D",
+   "radius": 29.4129,
+   "thickness": 0.5525,
+   "nd": 1.78,
+   "vd": 25.72,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S8D",
+   "radius": 3.2728,
+   "thickness": 0.0,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S9D",
+   "radius": 3.2728,
+   "thickness": 2.2,
+   "nd": 1.77,
+   "vd": 49.6,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S10D",
+   "radius": -23.6219,
+   "thickness": 0.1532,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S11D",
+   "radius": 5.243,
+   "thickness": 2.2254,
+   "nd": 1.5,
+   "vd": 81.61,
+   "conic": -14.92563,
+   "aspheric": {
+    "A4": 0.0083884,
+    "A6": -0.00094844,
+    "A8": 7.7184e-05,
+    "A10": -2.8002e-06,
+    "A12": 4.1032e-08
+   },
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S12D",
+   "radius": -5.8835,
+   "thickness": 0.5,
+   "conic": -1.257569,
+   "aspheric": {
+    "A4": 0.0013444,
+    "A6": 0.00012234,
+    "A8": -1.2976e-05,
+    "A10": 8.8417e-06,
+    "A12": 1.5125e-08
+   },
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S13D",
+   "radius": "inf",
+   "thickness": 0.4,
+   "nd": 1.52,
+   "vd": 64.2,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S14D",
+   "radius": "inf",
+   "thickness": 3.8693,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S15D",
+   "radius": "inf",
+   "thickness": 0.4,
+   "nd": 1.52,
+   "vd": 64.17,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S16D",
+   "radius": "inf",
+   "thickness": 0.125,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "IMA",
+   "radius": "inf",
+   "thickness": 0.0,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "image"
+  }
+ ],
+ "provenance": {
+  "method": "google_patents_text_table",
+  "extractor": "lenszoo.extract.gpatents 0.1",
+  "aspheric_tables": 3,
+  "warnings": [
+   "aspheric row S11E: no matching surface",
+   "aspheric row S12E: no matching surface",
+   "aspheric row S11F: no matching surface",
+   "aspheric row S12F: no matching surface"
+  ]
+ },
+ "verification": {
+  "status": "plausible",
+  "checks": {
+   "ttl": {
+    "claimed": 16.96,
+    "computed": 16.957,
+    "abs_err": -0.003,
+    "pass": true
+   },
+   "focus": {
+    "defocus_mm": -0.0094,
+    "dof_mm": 0.0047,
+    "pass": true
+   },
+   "image_quality": {
+    "rms_um_mean": 13.292,
+    "limit_um": 15.0,
+    "pass": true
+   }
+  },
+  "metrics": {
+   "efl": 3.18791,
+   "fno": 2.0,
+   "ttl": 16.957,
+   "defocus": -0.00939,
+   "hfov_deg": 30.0,
+   "assumptions": [
+    "F-number not stated: assumed F/2.0",
+    "HFOV and ImgH not stated: assumed 30 deg"
+   ],
+   "n_lenses": 6,
+   "imgh_real": 1.63995,
+   "distortion_pct": -10.97468,
+   "mtf_freq_lpmm": 212.72975,
+   "fields": [
+    {
+     "Hy": 0.0,
+     "rms_um": 5.80456,
+     "mtf_t": 0.20865,
+     "mtf_s": 0.20852,
+     "vignetted_frac": 0.0,
+     "outlier_frac": 0.0
+    },
+    {
+     "Hy": 0.5,
+     "rms_um": 8.20605,
+     "mtf_t": 0.07407,
+     "mtf_s": 0.11975,
+     "vignetted_frac": 0.0,
+     "outlier_frac": 0.0
+    },
+    {
+     "Hy": 0.7,
+     "rms_um": 11.84797,
+     "mtf_t": 0.05387,
+     "mtf_s": 0.06776,
+     "vignetted_frac": 0.05512,
+     "outlier_frac": 0.0
+    },
+    {
+     "Hy": 0.85,
+     "rms_um": 16.85309,
+     "mtf_t": 0.04997,
+     "mtf_s": 0.00304,
+     "vignetted_frac": 0.07087,
+     "outlier_frac": 0.0
+    },
+    {
+     "Hy": 1.0,
+     "rms_um": 23.74649,
+     "mtf_t": 0.06539,
+     "mtf_s": 0.03212,
+     "vignetted_frac": 0.07087,
+     "outlier_frac": 0.0
+    }
+   ],
+   "rms_um_mean": 13.29163,
+   "full_field_vignetted": false,
+   "mtf_mean": 0.08831,
+   "airy_um": 1.43374,
+   "min_center_thickness": 0.4,
+   "min_edge_thickness": 0.4
+  },
+  "tolerances": {
+   "efl_rel": 0.01,
+   "ttl_abs": 0.02,
+   "ttl_rel": 0.005,
+   "imgh_rel": 0.03,
+   "defocus_dof": 3.0,
+   "rms_um": 15.0
+  },
+  "notes": [
+   "aspheric row S11E: no matching surface",
+   "aspheric row S12E: no matching surface",
+   "aspheric row S11F: no matching surface",
+   "aspheric row S12F: no matching surface",
+   "patent text gives no EFL for this embodiment: first-order checksum unavailable"
+  ],
+  "failed_checks": []
+ }
+}

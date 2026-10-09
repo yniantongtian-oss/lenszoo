@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lenszoo"
+version = "0.1.0"
+description = "Open, ray-trace-verified lens designs from Chinese patents + a Zemax-free lens-design agent benchmark on Optiland"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.11"
+authors = [{name = "Quan Zhan"}]
+dependencies = ["optiland>=0.6,<0.7", "numpy", "requests"]
+keywords = ["optics", "lens design", "patent", "benchmark", "optiland", "agents"]
+classifiers = ["License :: OSI Approved :: MIT License", "Programming Language :: Python :: 3", "Topic :: Scientific/Engineering :: Physics"]
+
+[project.optional-dependencies]
+dev = ["pytest", "jsonschema"]
+
+[project.scripts]
+lenszoo = "lenszoo.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+lenszoo = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

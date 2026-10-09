@@ -1,0 +1,42 @@
+{
+ "id": "T11-cheap3p-f3.0",
+ "title": "Low-cost 3-element lens f=3.0 mm F/2.8",
+ "prompt": "Design a phone camera lens that meets the spec.",
+ "spec": {
+  "efl": 3.0,
+  "fno": 2.8,
+  "hfov_deg": 30.0,
+  "ttl_max": 4.0,
+  "wavelengths_um": [
+   0.4861327,
+   0.5875618,
+   0.6562725
+  ],
+  "primary_wavelength_um": 0.5875618,
+  "object": "inf"
+ },
+ "constraints": {
+  "efl_tol_rel": 0.02,
+  "min_center_thickness": 0.2,
+  "max_elements": 3,
+  "max_distortion_pct": 3.0
+ },
+ "scoring": {
+  "fields": [
+   0,
+   0.5,
+   0.7,
+   0.85,
+   1.0
+  ]
+ },
+ "reference": {
+  "spec_source": "synthetic",
+  "exclude_patents": []
+ },
+ "tags": [
+  "synthetic",
+  "3P",
+  "easy"
+ ]
+}

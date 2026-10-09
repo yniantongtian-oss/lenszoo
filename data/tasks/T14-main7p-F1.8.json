@@ -1,0 +1,42 @@
+{
+ "id": "T14-main7p-F1.8",
+ "title": "Fast 7-element main lens f=4.0 mm F/1.8",
+ "prompt": "Design a phone camera lens that meets the spec.",
+ "spec": {
+  "efl": 4.0,
+  "fno": 1.8,
+  "hfov_deg": 37.0,
+  "ttl_max": 4.9,
+  "wavelengths_um": [
+   0.4861327,
+   0.5875618,
+   0.6562725
+  ],
+  "primary_wavelength_um": 0.5875618,
+  "object": "inf"
+ },
+ "constraints": {
+  "efl_tol_rel": 0.02,
+  "min_center_thickness": 0.2,
+  "max_elements": 7,
+  "max_distortion_pct": 3.0
+ },
+ "scoring": {
+  "fields": [
+   0,
+   0.5,
+   0.7,
+   0.85,
+   1.0
+  ]
+ },
+ "reference": {
+  "spec_source": "synthetic",
+  "exclude_patents": []
+ },
+ "tags": [
+  "synthetic",
+  "main",
+  "hard"
+ ]
+}

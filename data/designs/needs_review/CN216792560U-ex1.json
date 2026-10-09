@@ -1,0 +1,467 @@
+{
+ "schema_version": "0.1",
+ "id": "CN216792560U-ex1",
+ "source": {
+  "patent": "CN216792560U",
+  "url": "https://patents.google.com/patent/CN216792560U/zh",
+  "title": "Imaging lens",
+  "assignee": "Zhejiang Sunny Optics Co Ltd",
+  "date": "2022-06-21",
+  "embodiment": 1,
+  "table": "Table 2",
+  "pdf_url": "https://patentimages.storage.googleapis.com/90/1b/f9/cc336b6e80871e/CN216792560U.pdf"
+ },
+ "claimed": {
+  "ttl": 7.47,
+  "imgh": 4.9,
+  "hfov_deg": 39.78,
+  "fno": 1.9
+ },
+ "wavelengths_um": [
+  0.4861327,
+  0.5875618,
+  0.6562725
+ ],
+ "primary_wavelength_um": 0.5875618,
+ "surfaces": [
+  {
+   "name": "OBJ",
+   "radius": "inf",
+   "thickness": "inf",
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "object"
+  },
+  {
+   "name": "S3",
+   "radius": -550.0,
+   "thickness": 0.07,
+   "nd": 1.41,
+   "vd": 50.0,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S4",
+   "radius": -550.0,
+   "thickness": 0.2,
+   "nd": 1.29,
+   "vd": 100.0,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S5",
+   "radius": "inf",
+   "thickness": 0.02,
+   "nd": 1.41,
+   "vd": 50.0,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S6",
+   "radius": "inf",
+   "thickness": 0.21,
+   "nd": 1.52,
+   "vd": 64.2,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S7",
+   "radius": "inf",
+   "thickness": 0.3158,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "IMA",
+   "radius": "inf",
+   "thickness": 0.0,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "image"
+  }
+ ],
+ "provenance": {
+  "method": "google_patents_text_table",
+  "extractor": "lenszoo.extract.gpatents 0.1",
+  "aspheric_tables": 3,
+  "warnings": [
+   "no image row in table; appended image after last row",
+   "aspheric row S1: no matching surface",
+   "aspheric row S2: no matching surface",
+   "aspheric row S8: no matching surface",
+   "aspheric row S9: no matching surface",
+   "aspheric row S10: no matching surface",
+   "aspheric row S11: no matching surface",
+   "aspheric row S12: no matching surface",
+   "aspheric row S13: no matching surface",
+   "aspheric row S14: no matching surface",
+   "aspheric row S15: no matching surface",
+   "aspheric row S16: no matching surface",
+   "aspheric row S17: no matching surface",
+   "aspheric row S18: no matching surface",
+   "aspheric row S19: no matching surface",
+   "aspheric row S1: no matching surface",
+   "aspheric row S2: no matching surface",
+   "aspheric row S8: no matching surface",
+   "aspheric row S9: no matching surface",
+   "aspheric row S10: no matching surface",
+   "aspheric row S11: no matching surface",
+   "aspheric row S12: no matching surface",
+   "aspheric row S13: no matching surface",
+   "aspheric row S14: no matching surface",
+   "aspheric row S15: no matching surface",
+   "aspheric row S16: no matching surface",
+   "aspheric row S17: no matching surface",
+   "aspheric row S18: no matching surface",
+   "aspheric row S19: no matching surface",
+   "aspheric row S1: no matching surface",
+   "aspheric row S2: no matching surface",
+   "aspheric row S8: no matching surface",
+   "aspheric row S9: no matching surface",
+   "aspheric row S10: no matching surface",
+   "aspheric row S11: no matching surface",
+   "aspheric row S12: no matching surface",
+   "aspheric row S13: no matching surface",
+   "aspheric row S14: no matching surface",
+   "aspheric row S15: no matching surface",
+   "aspheric row S16: no matching surface",
+   "aspheric row S17: no matching surface",
+   "aspheric row S18: no matching surface",
+   "aspheric row S19: no matching surface",
+   "aspheric row S1: no matching surface",
+   "aspheric row S2: no matching surface",
+   "aspheric row S8: no matching surface",
+   "aspheric row S9: no matching surface",
+   "aspheric row S10: no matching surface",
+   "aspheric row S11: no matching surface",
+   "aspheric row S12: no matching surface",
+   "aspheric row S13: no matching surface",
+   "aspheric row S14: no matching surface",
+   "aspheric row S15: no matching surface",
+   "aspheric row S16: no matching surface",
+   "aspheric row S17: no matching surface",
+   "aspheric row S18: no matching surface",
+   "aspheric row S19: no matching surface",
+   "aspheric row S1: no matching surface",
+   "aspheric row S2: no matching surface",
+   "aspheric row S8: no matching surface",
+   "aspheric row S9: no matching surface",
+   "aspheric row S10: no matching surface",
+   "aspheric row S11: no matching surface",
+   "aspheric row S12: no matching surface",
+   "aspheric row S13: no matching surface",
+   "aspheric row S14: no matching surface",
+   "aspheric row S15: no matching surface",
+   "aspheric row S16: no matching surface",
+   "aspheric row S17: no matching surface",
+   "aspheric row S18: no matching surface",
+   "aspheric row S19: no matching surface",
+   "aspheric row S1: no matching surface",
+   "aspheric row S2: no matching surface",
+   "aspheric row S8: no matching surface",
+   "aspheric row S9: no matching surface",
+   "aspheric row S10: no matching surface",
+   "aspheric row S11: no matching surface",
+   "aspheric row S12: no matching surface",
+   "aspheric row S13: no matching surface",
+   "aspheric row S14: no matching surface",
+   "aspheric row S15: no matching surface",
+   "aspheric row S16: no matching surface",
+   "aspheric row S17: no matching surface",
+   "aspheric row S18: no matching surface",
+   "aspheric row S19: no matching surface"
+  ]
+ },
+ "verification": {
+  "status": "needs_review",
+  "checks": {
+   "ttl": {
+    "claimed": 7.47,
+    "computed": 0.8158,
+    "abs_err": -6.6542,
+    "pass": false
+   },
+   "imgh": {
+    "claimed": 4.9,
+    "computed": 0.5204,
+    "rel_err": -0.8938,
+    "pass": false
+   },
+   "focus": {
+    "defocus_mm": -1897.2741,
+    "dof_mm": 0.0042,
+    "pass": false
+   },
+   "image_quality": {
+    "rms_um_mean": 378761.96,
+    "limit_um": 15.0,
+    "pass": false
+   }
+  },
+  "metrics": {
+   "efl": -1896.58077,
+   "fno": 1.9,
+   "ttl": 0.8158,
+   "defocus": -1897.27414,
+   "hfov_deg": 39.78,
+   "assumptions": [
+    "no stop labelled: stop placed at first refracting surface"
+   ],
+   "n_lenses": 2,
+   "imgh_real": 0.52045,
+   "distortion_pct": -7.09193,
+   "mtf_freq_lpmm": 223.92605,
+   "fields": [
+    {
+     "Hy": 0.0,
+     "rms_um": 440718.64672,
+     "mtf_t": 0.05032,
+     "mtf_s": 0.02363,
+     "vignetted_frac": 0.0,
+     "outlier_frac": 0.0
+    },
+    {
+     "Hy": 0.5,
+     "rms_um": 384338.32,
+     "mtf_t": 0.03868,
+     "mtf_s": 0.1865,
+     "vignetted_frac": 0.19685,
+     "outlier_frac": 0.0
+    },
+    {
+     "Hy": 0.7,
+     "rms_um": 370368.13149,
+     "mtf_t": 0.0533,
+     "mtf_s": 0.03827,
+     "vignetted_frac": 0.25197,
+     "outlier_frac": 0.0
+    },
+    {
+     "Hy": 0.85,
+     "rms_um": 354586.54925,
+     "mtf_t": 0.15396,
+     "mtf_s": 0.03828,
+     "vignetted_frac": 0.31496,
+     "outlier_frac": 0.0
+    },
+    {
+     "Hy": 1.0,
+     "rms_um": 343798.15062,
+     "mtf_t": 0.09112,
+     "mtf_s": 0.00322,
+     "vignetted_frac": 0.34646,
+     "outlier_frac": 0.0
+    }
+   ],
+   "rms_um_mean": 378761.95961,
+   "full_field_vignetted": false,
+   "mtf_mean": 0.06773,
+   "airy_um": 1.36206,
+   "min_center_thickness": 0.02,
+   "min_edge_thickness": null
+  },
+  "tolerances": {
+   "efl_rel": 0.01,
+   "ttl_abs": 0.02,
+   "ttl_rel": 0.005,
+   "imgh_rel": 0.03,
+   "defocus_dof": 3.0,
+   "rms_um": 15.0
+  },
+  "refined": {
+   "nd": {
+    "1.41/50.0": 1.405,
+    "1.29/100.0": 1.295,
+    "1.52/64.2": 1.525
+   },
+   "checks": {
+    "ttl": {
+     "claimed": 7.47,
+     "computed": 0.8158,
+     "abs_err": -6.6542,
+     "pass": false
+    },
+    "imgh": {
+     "claimed": 4.9,
+     "computed": 0.5197,
+     "rel_err": -0.8939,
+     "pass": false
+    },
+    "focus": {
+     "defocus_mm": -1865.1229,
+     "dof_mm": 0.0042,
+     "pass": false
+    },
+    "image_quality": {
+     "rms_um_mean": 374479.093,
+     "limit_um": 15.0,
+     "pass": false
+    }
+   },
+   "metrics": {
+    "efl": -1864.43229,
+    "fno": 1.9,
+    "ttl": 0.8158,
+    "defocus": -1865.12287,
+    "hfov_deg": 39.78,
+    "assumptions": [
+     "no stop labelled: stop placed at first refracting surface"
+    ],
+    "n_lenses": 2,
+    "imgh_real": 0.51968,
+    "distortion_pct": -7.11482,
+    "mtf_freq_lpmm": 223.92605,
+    "fields": [
+     {
+      "Hy": 0.0,
+      "rms_um": 428840.454,
+      "mtf_t": 0.01812,
+      "mtf_s": 0.06114,
+      "vignetted_frac": 0.0,
+      "outlier_frac": 0.0
+     },
+     {
+      "Hy": 0.5,
+      "rms_um": 382347.84969,
+      "mtf_t": 0.16094,
+      "mtf_s": 0.11112,
+      "vignetted_frac": 0.1811,
+      "outlier_frac": 0.0
+     },
+     {
+      "Hy": 0.7,
+      "rms_um": 363376.10629,
+      "mtf_t": 0.10098,
+      "mtf_s": 0.0216,
+      "vignetted_frac": 0.24409,
+      "outlier_frac": 0.0
+     },
+     {
+      "Hy": 0.85,
+      "rms_um": 362577.7512,
+      "mtf_t": 0.05134,
+      "mtf_s": 0.09784,
+      "vignetted_frac": 0.28346,
+      "outlier_frac": 0.0
+     },
+     {
+      "Hy": 1.0,
+      "rms_um": 335253.30361,
+      "mtf_t": 0.03854,
+      "mtf_s": 0.00991,
+      "vignetted_frac": 0.34646,
+      "outlier_frac": 0.0
+     }
+    ],
+    "rms_um_mean": 374479.09296,
+    "full_field_vignetted": false,
+    "mtf_mean": 0.06715,
+    "airy_um": 1.36206,
+    "min_center_thickness": 0.02,
+    "min_edge_thickness": null
+   }
+  },
+  "notes": [
+   "no image row in table; appended image after last row",
+   "aspheric row S1: no matching surface",
+   "aspheric row S2: no matching surface",
+   "aspheric row S8: no matching surface",
+   "aspheric row S9: no matching surface",
+   "aspheric row S10: no matching surface",
+   "aspheric row S11: no matching surface",
+   "aspheric row S12: no matching surface",
+   "aspheric row S13: no matching surface",
+   "aspheric row S14: no matching surface",
+   "aspheric row S15: no matching surface",
+   "aspheric row S16: no matching surface",
+   "aspheric row S17: no matching surface",
+   "aspheric row S18: no matching surface",
+   "aspheric row S19: no matching surface",
+   "aspheric row S1: no matching surface",
+   "aspheric row S2: no matching surface",
+   "aspheric row S8: no matching surface",
+   "aspheric row S9: no matching surface",
+   "aspheric row S10: no matching surface",
+   "aspheric row S11: no matching surface",
+   "aspheric row S12: no matching surface",
+   "aspheric row S13: no matching surface",
+   "aspheric row S14: no matching surface",
+   "aspheric row S15: no matching surface",
+   "aspheric row S16: no matching surface",
+   "aspheric row S17: no matching surface",
+   "aspheric row S18: no matching surface",
+   "aspheric row S19: no matching surface",
+   "aspheric row S1: no matching surface",
+   "aspheric row S2: no matching surface",
+   "aspheric row S8: no matching surface",
+   "aspheric row S9: no matching surface",
+   "aspheric row S10: no matching surface",
+   "aspheric row S11: no matching surface",
+   "aspheric row S12: no matching surface",
+   "aspheric row S13: no matching surface",
+   "aspheric row S14: no matching surface",
+   "aspheric row S15: no matching surface",
+   "aspheric row S16: no matching surface",
+   "aspheric row S17: no matching surface",
+   "aspheric row S18: no matching surface",
+   "aspheric row S19: no matching surface",
+   "aspheric row S1: no matching surface",
+   "aspheric row S2: no matching surface",
+   "aspheric row S8: no matching surface",
+   "aspheric row S9: no matching surface",
+   "aspheric row S10: no matching surface",
+   "aspheric row S11: no matching surface",
+   "aspheric row S12: no matching surface",
+   "aspheric row S13: no matching surface",
+   "aspheric row S14: no matching surface",
+   "aspheric row S15: no matching surface",
+   "aspheric row S16: no matching surface",
+   "aspheric row S17: no matching surface",
+   "aspheric row S18: no matching surface",
+   "aspheric row S19: no matching surface",
+   "aspheric row S1: no matching surface",
+   "aspheric row S2: no matching surface",
+   "aspheric row S8: no matching surface",
+   "aspheric row S9: no matching surface",
+   "aspheric row S10: no matching surface",
+   "aspheric row S11: no matching surface",
+   "aspheric row S12: no matching surface",
+   "aspheric row S13: no matching surface",
+   "aspheric row S14: no matching surface",
+   "aspheric row S15: no matching surface",
+   "aspheric row S16: no matching surface",
+   "aspheric row S17: no matching surface",
+   "aspheric row S18: no matching surface",
+   "aspheric row S19: no matching surface",
+   "aspheric row S1: no matching surface",
+   "aspheric row S2: no matching surface",
+   "aspheric row S8: no matching surface",
+   "aspheric row S9: no matching surface",
+   "aspheric row S10: no matching surface",
+   "aspheric row S11: no matching surface",
+   "aspheric row S12: no matching surface",
+   "aspheric row S13: no matching surface",
+   "aspheric row S14: no matching surface",
+   "aspheric row S15: no matching surface",
+   "aspheric row S16: no matching surface",
+   "aspheric row S17: no matching surface",
+   "aspheric row S18: no matching surface",
+   "aspheric row S19: no matching surface"
+  ],
+  "failed_checks": [
+   "ttl",
+   "imgh",
+   "focus",
+   "image_quality"
+  ]
+ }
+}

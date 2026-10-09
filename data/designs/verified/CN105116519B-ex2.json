@@ -1,0 +1,425 @@
+{
+ "schema_version": "0.1",
+ "id": "CN105116519B-ex2",
+ "source": {
+  "patent": "CN105116519B",
+  "url": "https://patents.google.com/patent/CN105116519B/zh",
+  "title": "Imaging lens",
+  "assignee": "Zhejiang Sunny Optics Co Ltd",
+  "date": "2017-11-14",
+  "embodiment": 2,
+  "table": "Table 4",
+  "pdf_url": "https://patentimages.storage.googleapis.com/c8/d9/ba/5a1b41be357d09/CN105116519B.pdf"
+ },
+ "claimed": {
+  "efl": 4.04,
+  "ttl": 4.67,
+  "fno": 2.2,
+  "hfov_deg": 36.4
+ },
+ "wavelengths_um": [
+  0.4861327,
+  0.5875618,
+  0.6562725
+ ],
+ "primary_wavelength_um": 0.5875618,
+ "surfaces": [
+  {
+   "name": "OBJ",
+   "radius": "inf",
+   "thickness": "inf",
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "object"
+  },
+  {
+   "name": "STO",
+   "radius": "inf",
+   "thickness": -0.2831,
+   "conic": 0.0,
+   "is_stop": true,
+   "role": "stop"
+  },
+  {
+   "name": "S1",
+   "radius": 1.4064,
+   "thickness": 0.6812,
+   "nd": 1.544,
+   "vd": 56.11,
+   "conic": -0.5485,
+   "aspheric": {
+    "A4": 0.024078,
+    "A6": 0.0072677,
+    "A8": -0.020818,
+    "A10": 0.021048,
+    "A12": -0.021027,
+    "A14": -0.0054517,
+    "A16": -0.012328
+   },
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S2",
+   "radius": 24.2276,
+   "thickness": 0.0459,
+   "conic": 99.99,
+   "aspheric": {
+    "A4": -0.043839,
+    "A6": -0.010281,
+    "A8": 0.01691,
+    "A10": -0.04783,
+    "A12": 0.0037154,
+    "A14": 0.00051079,
+    "A16": 0.0054842
+   },
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S3",
+   "radius": -58.0389,
+   "thickness": 0.2385,
+   "nd": 1.64,
+   "vd": 23.53,
+   "conic": -99.99,
+   "aspheric": {
+    "A4": 0.017755,
+    "A6": 0.031978,
+    "A8": 0.041894,
+    "A10": -0.040529,
+    "A12": 0.030957,
+    "A14": -0.0040353,
+    "A16": 0.020032
+   },
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S4",
+   "radius": 4.8092,
+   "thickness": 0.3924,
+   "conic": 27.9337,
+   "aspheric": {
+    "A4": 0.037265,
+    "A6": 0.070268,
+    "A8": -0.047107,
+    "A10": 0.040973,
+    "A12": 0.049235,
+    "A14": 0.017861,
+    "A16": -0.0038843
+   },
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S5",
+   "radius": -5.3563,
+   "thickness": 0.238,
+   "nd": 1.64,
+   "vd": 23.53,
+   "conic": 26.7215,
+   "aspheric": {
+    "A4": -0.11163,
+    "A6": -0.011714,
+    "A8": -0.025459,
+    "A10": 0.075092,
+    "A12": -0.031625,
+    "A14": 0.034201,
+    "A16": -0.013726
+   },
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S6",
+   "radius": -4.3932,
+   "thickness": 0.0329,
+   "conic": -12.1075,
+   "aspheric": {
+    "A4": -0.084075,
+    "A6": 0.022248,
+    "A8": -0.021962,
+    "A10": 0.055238,
+    "A12": -0.018899,
+    "A14": 0.0093255,
+    "A16": -0.0057814
+   },
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S7",
+   "radius": -3.431,
+   "thickness": 0.3807,
+   "nd": 1.535,
+   "vd": 55.8,
+   "conic": -2.1788,
+   "aspheric": {
+    "A4": 0.010458,
+    "A6": 0.0064397,
+    "A8": 0.00050385,
+    "A10": 3.7372e-05,
+    "A12": 0.00036024,
+    "A14": -6.4864e-05,
+    "A16": -0.00167
+   },
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S8",
+   "radius": -3.4579,
+   "thickness": 0.1397,
+   "conic": -68.605,
+   "aspheric": {
+    "A4": -0.10477,
+    "A6": 0.020513,
+    "A8": -0.036306,
+    "A10": 0.043106,
+    "A12": -0.025873,
+    "A14": 0.0081233,
+    "A16": -0.0013097
+   },
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S9",
+   "radius": -3.795,
+   "thickness": 0.265,
+   "nd": 1.64,
+   "vd": 23.53,
+   "conic": -61.1133,
+   "aspheric": {
+    "A4": -0.098398,
+    "A6": 0.0095421,
+    "A8": -0.041132,
+    "A10": 0.042269,
+    "A12": -0.025753,
+    "A14": 0.0080991,
+    "A16": -0.0017275
+   },
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S10",
+   "radius": -8.2832,
+   "thickness": 0.1135,
+   "conic": 9.2014,
+   "aspheric": {
+    "A4": -0.092894,
+    "A6": 0.023449,
+    "A8": -0.035286,
+    "A10": 0.044035,
+    "A12": -0.02523,
+    "A14": 0.0084201,
+    "A16": -0.0013434
+   },
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S11",
+   "radius": 21.839,
+   "thickness": 0.357,
+   "nd": 1.535,
+   "vd": 55.8,
+   "conic": 99.0,
+   "aspheric": {
+    "A4": 0.2829,
+    "A6": -0.42377,
+    "A8": 0.34419,
+    "A10": -0.22544,
+    "A12": 0.09508,
+    "A14": -0.020955,
+    "A16": 0.0018229
+   },
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S12",
+   "radius": -5.365,
+   "thickness": 0.1598,
+   "conic": -74.0731,
+   "aspheric": {
+    "A4": 0.29509,
+    "A6": -0.24356,
+    "A8": 0.080202,
+    "A10": -0.0090985,
+    "A12": -0.0015156,
+    "A14": 0.00050605,
+    "A16": -3.7338e-05
+   },
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S13",
+   "radius": 1.5058,
+   "thickness": 0.4389,
+   "nd": 1.535,
+   "vd": 55.8,
+   "conic": -1.2697,
+   "aspheric": {
+    "A4": -0.43261,
+    "A6": 0.21433,
+    "A8": -0.04953,
+    "A10": 0.0037159,
+    "A12": 0.00055641,
+    "A14": -0.00011814,
+    "A16": 5.8454e-06
+   },
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S14",
+   "radius": 0.9247,
+   "thickness": 0.2179,
+   "conic": -3.8813,
+   "aspheric": {
+    "A4": -0.22732,
+    "A6": 0.14057,
+    "A8": -0.065609,
+    "A10": 0.01942,
+    "A12": -0.0033081,
+    "A14": 0.00029505,
+    "A16": -1.062e-05
+   },
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S15",
+   "radius": "inf",
+   "thickness": 0.21,
+   "nd": 1.517,
+   "vd": 64.17,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S16",
+   "radius": "inf",
+   "thickness": 0.7594,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S17",
+   "radius": "inf",
+   "thickness": 0.0,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "image"
+  }
+ ],
+ "provenance": {
+  "method": "google_patents_text_table",
+  "extractor": "lenszoo.extract.gpatents 0.1",
+  "aspheric_tables": 1,
+  "warnings": []
+ },
+ "verification": {
+  "status": "verified",
+  "checks": {
+   "efl": {
+    "claimed": 4.04,
+    "computed": 4.0453,
+    "rel_err": 0.0013,
+    "pass": true
+   },
+   "ttl": {
+    "claimed": 4.67,
+    "computed": 4.6708,
+    "abs_err": 0.0008,
+    "pass": true
+   },
+   "focus": {
+    "defocus_mm": 0.0167,
+    "dof_mm": 0.0057,
+    "pass": true
+   },
+   "image_quality": {
+    "rms_um_mean": 2.559,
+    "limit_um": 15.0,
+    "pass": true
+   }
+  },
+  "metrics": {
+   "efl": 4.04529,
+   "fno": 2.2,
+   "ttl": 4.6708,
+   "defocus": 0.01672,
+   "hfov_deg": 36.4,
+   "assumptions": [],
+   "n_lenses": 7,
+   "imgh_real": 3.00326,
+   "distortion_pct": 1.31587,
+   "mtf_freq_lpmm": 193.39068,
+   "fields": [
+    {
+     "Hy": 0.0,
+     "rms_um": 1.17345,
+     "mtf_t": 0.61137,
+     "mtf_s": 0.61136,
+     "vignetted_frac": 0.0,
+     "outlier_frac": 0.0
+    },
+    {
+     "Hy": 0.5,
+     "rms_um": 2.74406,
+     "mtf_t": 0.35677,
+     "mtf_s": 0.39828,
+     "vignetted_frac": 0.0,
+     "outlier_frac": 0.0
+    },
+    {
+     "Hy": 0.7,
+     "rms_um": 3.35897,
+     "mtf_t": 0.33243,
+     "mtf_s": 0.51007,
+     "vignetted_frac": 0.0,
+     "outlier_frac": 0.0315
+    },
+    {
+     "Hy": 0.85,
+     "rms_um": 2.18009,
+     "mtf_t": 0.63869,
+     "mtf_s": 0.54366,
+     "vignetted_frac": 0.0,
+     "outlier_frac": 0.06562
+    },
+    {
+     "Hy": 1.0,
+     "rms_um": 3.33595,
+     "mtf_t": 0.21624,
+     "mtf_s": 0.44325,
+     "vignetted_frac": 0.10236,
+     "outlier_frac": 0.10819
+    }
+   ],
+   "rms_um_mean": 2.5585,
+   "full_field_vignetted": false,
+   "mtf_mean": 0.46621,
+   "airy_um": 1.57712,
+   "min_center_thickness": 0.21,
+   "min_edge_thickness": 0.21
+  },
+  "tolerances": {
+   "efl_rel": 0.01,
+   "ttl_abs": 0.02,
+   "ttl_rel": 0.005,
+   "imgh_rel": 0.03,
+   "defocus_dof": 3.0,
+   "rms_um": 15.0
+  },
+  "notes": [],
+  "failed_checks": []
+ }
+}

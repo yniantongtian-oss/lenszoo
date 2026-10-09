@@ -1,0 +1,211 @@
+{
+ "schema_version": "0.1",
+ "id": "CN101606095B-ex1",
+ "source": {
+  "patent": "CN101606095B",
+  "url": "https://patents.google.com/patent/CN101606095B/zh",
+  "title": "Imaging lens, imaging device and portable terminal",
+  "assignee": "Konica Minolta Opto Inc",
+  "date": "2011-06-08",
+  "embodiment": 1,
+  "table": null,
+  "pdf_url": "https://patentimages.storage.googleapis.com/a7/84/9b/364db031ba79f2/CN101606095B.pdf"
+ },
+ "claimed": {},
+ "wavelengths_um": [
+  0.4861327,
+  0.5875618,
+  0.6562725
+ ],
+ "primary_wavelength_um": 0.5875618,
+ "surfaces": [
+  {
+   "name": "OBJ",
+   "radius": "inf",
+   "thickness": "inf",
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "object"
+  },
+  {
+   "name": "1",
+   "radius": 0.911,
+   "thickness": 0.29,
+   "nd": 1.5071,
+   "vd": 54.0,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "2(APE)",
+   "radius": "inf",
+   "thickness": 0.39,
+   "nd": 1.48749,
+   "vd": 70.44,
+   "conic": 0.0,
+   "is_stop": true,
+   "role": "stop"
+  },
+  {
+   "name": "3",
+   "radius": "inf",
+   "thickness": 0.11,
+   "nd": 1.5737,
+   "vd": 29.0,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "4",
+   "radius": 1.564,
+   "thickness": 0.684,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "5",
+   "radius": 3.611,
+   "thickness": 0.115,
+   "nd": 1.5071,
+   "vd": 54.0,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "6",
+   "radius": "inf",
+   "thickness": 0.304,
+   "nd": 1.48749,
+   "vd": 70.44,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "7",
+   "radius": "inf",
+   "thickness": 0.355,
+   "nd": 1.5071,
+   "vd": 54.0,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "8",
+   "radius": 5.353,
+   "thickness": 0.928,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "9",
+   "radius": "inf",
+   "thickness": 0.0,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "image"
+  }
+ ],
+ "provenance": {
+  "method": "google_patents_text_table",
+  "extractor": "lenszoo.extract.gpatents 0.1",
+  "aspheric_tables": 0,
+  "warnings": []
+ },
+ "verification": {
+  "status": "needs_review",
+  "checks": {
+   "focus": {
+    "defocus_mm": 0.0042,
+    "dof_mm": 0.0047,
+    "pass": true
+   },
+   "image_quality": {
+    "rms_um_mean": 308.269,
+    "limit_um": 15.0,
+    "pass": false
+   }
+  },
+  "metrics": {
+   "efl": 2.9587,
+   "fno": 2.0,
+   "ttl": 3.176,
+   "defocus": 0.00416,
+   "hfov_deg": 30.0,
+   "assumptions": [
+    "F-number not stated: assumed F/2.0",
+    "HFOV and ImgH not stated: assumed 30 deg"
+   ],
+   "n_lenses": 4,
+   "imgh_real": 1.83818,
+   "distortion_pct": 7.79852,
+   "mtf_freq_lpmm": 212.72975,
+   "fields": [
+    {
+     "Hy": 0.0,
+     "rms_um": 177.4716,
+     "mtf_t": 0.0969,
+     "mtf_s": 0.11162,
+     "vignetted_frac": 0.0,
+     "outlier_frac": 0.0
+    },
+    {
+     "Hy": 0.5,
+     "rms_um": 304.43161,
+     "mtf_t": 0.04302,
+     "mtf_s": 0.00897,
+     "vignetted_frac": 0.0,
+     "outlier_frac": 0.0
+    },
+    {
+     "Hy": 0.7,
+     "rms_um": 296.83815,
+     "mtf_t": 0.03561,
+     "mtf_s": 0.00918,
+     "vignetted_frac": 0.07087,
+     "outlier_frac": 0.0
+    },
+    {
+     "Hy": 0.85,
+     "rms_um": 349.25079,
+     "mtf_t": 0.05212,
+     "mtf_s": 0.0648,
+     "vignetted_frac": 0.08661,
+     "outlier_frac": 0.0
+    },
+    {
+     "Hy": 1.0,
+     "rms_um": 413.35114,
+     "mtf_t": 0.059,
+     "mtf_s": 0.01072,
+     "vignetted_frac": 0.10236,
+     "outlier_frac": 0.0
+    }
+   ],
+   "rms_um_mean": 308.26866,
+   "full_field_vignetted": false,
+   "mtf_mean": 0.04919,
+   "airy_um": 1.43374,
+   "min_center_thickness": 0.11,
+   "min_edge_thickness": null
+  },
+  "tolerances": {
+   "efl_rel": 0.01,
+   "ttl_abs": 0.02,
+   "ttl_rel": 0.005,
+   "imgh_rel": 0.03,
+   "defocus_dof": 3.0,
+   "rms_um": 15.0
+  },
+  "notes": [],
+  "failed_checks": [
+   "image_quality"
+  ]
+ }
+}

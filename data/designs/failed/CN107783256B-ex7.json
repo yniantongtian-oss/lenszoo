@@ -1,0 +1,334 @@
+{
+ "schema_version": "0.1",
+ "id": "CN107783256B-ex7",
+ "source": {
+  "patent": "CN107783256B",
+  "url": "https://patents.google.com/patent/CN107783256B/zh",
+  "title": "Imaging lens, camera device, vehicle-mounted camera device, sensing device and vehicle-mounted sensing device",
+  "assignee": "Ricoh Co Ltd",
+  "date": "2020-11-06",
+  "embodiment": 7,
+  "table": null,
+  "pdf_url": "https://patentimages.storage.googleapis.com/d1/d8/4a/2ef96f932b8a7e/CN107783256B.pdf"
+ },
+ "claimed": {},
+ "wavelengths_um": [
+  0.4861327,
+  0.5875618,
+  0.6562725
+ ],
+ "primary_wavelength_um": 0.5875618,
+ "surfaces": [
+  {
+   "name": "OBJ",
+   "radius": "inf",
+   "thickness": "inf",
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "object"
+  },
+  {
+   "name": "1",
+   "radius": 5.75,
+   "thickness": 1.8,
+   "nd": 1.51633,
+   "vd": 64.14,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "2",
+   "radius": 2.615,
+   "thickness": 0.77,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "3",
+   "radius": 7.265,
+   "thickness": 1.4,
+   "nd": 1.6379,
+   "vd": 23.2,
+   "conic": -21.245,
+   "aspheric": {
+    "A4": 0.00189174,
+    "A6": -0.000531579,
+    "A8": -0.000108719,
+    "A10": 5.57351e-05,
+    "A12": -7.30349e-06,
+    "A14": 0.0
+   },
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "4",
+   "radius": 5.213,
+   "thickness": 0.4,
+   "conic": -1.5711,
+   "aspheric": {
+    "A4": -0.004059,
+    "A6": -1.41149e-05,
+    "A8": 0.000318423,
+    "A10": -9.44406e-05,
+    "A12": 0.0,
+    "A14": 0.0
+   },
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "5",
+   "radius": 0.0,
+   "thickness": 0.28,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "6",
+   "radius": -400.0,
+   "thickness": 3.66,
+   "nd": 1.7725,
+   "vd": 49.6,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "7",
+   "radius": -5.357,
+   "thickness": 0.1,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "8",
+   "radius": 4.335,
+   "thickness": 2.25,
+   "nd": 1.535,
+   "vd": 55.73,
+   "conic": 0.0,
+   "aspheric": {
+    "A4": -0.00136032,
+    "A6": -0.000209499,
+    "A8": 1.11698e-05,
+    "A10": -1.16735e-06,
+    "A12": 0.0,
+    "A14": 0.0
+   },
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "9",
+   "radius": -7.862,
+   "thickness": 0.1,
+   "conic": 0.0,
+   "aspheric": {
+    "A4": -0.00497429,
+    "A6": 0.00173323,
+    "A8": -0.000377223,
+    "A10": 3.74312e-05,
+    "A12": -1.04036e-06,
+    "A14": -3.20325e-08
+   },
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "10",
+   "radius": -13.183,
+   "thickness": 0.75,
+   "nd": 1.6379,
+   "vd": 23.2,
+   "conic": 0.0,
+   "aspheric": {
+    "A4": 0.000614517,
+    "A6": 0.00347636,
+    "A8": -0.00103966,
+    "A10": 0.000119076,
+    "A12": -4.72478e-06,
+    "A14": 0.0
+   },
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "11",
+   "radius": 4.209,
+   "thickness": 1.37,
+   "conic": -0.3031,
+   "aspheric": {
+    "A4": -0.0012968,
+    "A6": 0.00470756,
+    "A8": -0.000953991,
+    "A10": 6.42155e-05,
+    "A12": 0.0,
+    "A14": 0.0
+   },
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "12",
+   "radius": 3.367,
+   "thickness": 2.12,
+   "nd": 1.535,
+   "vd": 55.73,
+   "conic": -4.4417,
+   "aspheric": {
+    "A4": 6.38995e-06,
+    "A6": 9.96703e-05,
+    "A8": 2.57219e-05,
+    "A10": -2.50551e-06,
+    "A12": 0.0,
+    "A14": 0.0
+   },
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "13",
+   "radius": 5.446,
+   "thickness": 0.42,
+   "conic": 0.0,
+   "aspheric": {
+    "A4": -0.0102978,
+    "A6": 0.000186501,
+    "A8": 1.43023e-05,
+    "A10": 3.54916e-06,
+    "A12": -7.73874e-07,
+    "A14": 2.9494e-08
+   },
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "14",
+   "radius": 0.0,
+   "thickness": 0.5,
+   "nd": 1.5168,
+   "vd": 64.2,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "15",
+   "radius": 0.0,
+   "thickness": 0.0,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "IMA",
+   "radius": "inf",
+   "thickness": 0.0,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "image"
+  }
+ ],
+ "provenance": {
+  "method": "google_patents_text_table",
+  "extractor": "lenszoo.extract.gpatents 0.1",
+  "aspheric_tables": 1,
+  "warnings": [
+   "no image row in table; appended image after last row"
+  ]
+ },
+ "verification": {
+  "status": "failed",
+  "checks": {
+   "focus": {
+    "defocus_mm": NaN,
+    "dof_mm": 0.0047,
+    "pass": false
+   },
+   "image_quality": {
+    "rms_um_mean": null,
+    "limit_um": 15.0,
+    "pass": false
+   }
+  },
+  "metrics": {
+   "efl": null,
+   "fno": 2.0,
+   "ttl": 15.92,
+   "defocus": null,
+   "hfov_deg": 30.0,
+   "assumptions": [
+    "no stop labelled: stop placed at first refracting surface",
+    "F-number not stated: assumed F/2.0",
+    "HFOV and ImgH not stated: assumed 30 deg"
+   ],
+   "n_lenses": 7,
+   "imgh_real": null,
+   "distortion_pct": null,
+   "mtf_freq_lpmm": 212.72975,
+   "fields": [
+    {
+     "Hy": 0.0,
+     "rms_um": null,
+     "mtf_t": 0.0,
+     "mtf_s": 0.0,
+     "vignetted_frac": 1.0
+    },
+    {
+     "Hy": 0.5,
+     "rms_um": null,
+     "mtf_t": 0.0,
+     "mtf_s": 0.0,
+     "vignetted_frac": 1.0
+    },
+    {
+     "Hy": 0.7,
+     "rms_um": null,
+     "mtf_t": 0.0,
+     "mtf_s": 0.0,
+     "vignetted_frac": 1.0
+    },
+    {
+     "Hy": 0.85,
+     "rms_um": null,
+     "mtf_t": 0.0,
+     "mtf_s": 0.0,
+     "vignetted_frac": 1.0
+    },
+    {
+     "Hy": 1.0,
+     "rms_um": null,
+     "mtf_t": 0.0,
+     "mtf_s": 0.0,
+     "vignetted_frac": 1.0
+    }
+   ],
+   "rms_um_mean": null,
+   "full_field_vignetted": true,
+   "mtf_mean": 0.0,
+   "airy_um": 1.43374,
+   "min_center_thickness": 0.5,
+   "min_edge_thickness": null
+  },
+  "tolerances": {
+   "efl_rel": 0.01,
+   "ttl_abs": 0.02,
+   "ttl_rel": 0.005,
+   "imgh_rel": 0.03,
+   "defocus_dof": 3.0,
+   "rms_um": 15.0
+  },
+  "notes": [
+   "no image row in table; appended image after last row"
+  ],
+  "failed_checks": [
+   "focus",
+   "image_quality"
+  ]
+ }
+}

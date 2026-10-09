@@ -1,0 +1,299 @@
+{
+ "schema_version": "0.1",
+ "id": "CN216792560U-ex2b",
+ "source": {
+  "patent": "CN216792560U",
+  "url": "https://patents.google.com/patent/CN216792560U/zh",
+  "title": "Imaging lens",
+  "assignee": "Zhejiang Sunny Optics Co Ltd",
+  "date": "2022-06-21",
+  "embodiment": 2,
+  "table": "Table 8",
+  "pdf_url": "https://patentimages.storage.googleapis.com/90/1b/f9/cc336b6e80871e/CN216792560U.pdf"
+ },
+ "claimed": {
+  "ttl": 7.53,
+  "imgh": 4.9,
+  "hfov_deg": 39.76,
+  "fno": 1.92
+ },
+ "wavelengths_um": [
+  0.4861327,
+  0.5875618,
+  0.6562725
+ ],
+ "primary_wavelength_um": 0.5875618,
+ "surfaces": [
+  {
+   "name": "OBJ",
+   "radius": "inf",
+   "thickness": "inf",
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "object"
+  },
+  {
+   "name": "S3",
+   "radius": 550.0,
+   "thickness": 0.07,
+   "nd": 1.41,
+   "vd": 50.0,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S4",
+   "radius": 550.0,
+   "thickness": 0.2,
+   "nd": 1.29,
+   "vd": 100.0,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S5",
+   "radius": "inf",
+   "thickness": 0.02,
+   "nd": 1.41,
+   "vd": 50.0,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S6",
+   "radius": "inf",
+   "thickness": 0.21,
+   "nd": 1.52,
+   "vd": 64.2,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S7",
+   "radius": "inf",
+   "thickness": 0.3117,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "IMA",
+   "radius": "inf",
+   "thickness": 0.0,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "image"
+  }
+ ],
+ "provenance": {
+  "method": "google_patents_text_table",
+  "extractor": "lenszoo.extract.gpatents 0.1",
+  "aspheric_tables": 0,
+  "warnings": [
+   "no image row in table; appended image after last row"
+  ]
+ },
+ "verification": {
+  "status": "needs_review",
+  "checks": {
+   "ttl": {
+    "claimed": 7.53,
+    "computed": 0.8117,
+    "abs_err": -6.7183,
+    "pass": false
+   },
+   "imgh": {
+    "claimed": 4.9,
+    "computed": 0.5167,
+    "rel_err": -0.8945,
+    "pass": false
+   },
+   "focus": {
+    "defocus_mm": 1895.8334,
+    "dof_mm": 0.0043,
+    "pass": false
+   },
+   "image_quality": {
+    "rms_um_mean": 374193.307,
+    "limit_um": 15.0,
+    "pass": false
+   }
+  },
+  "metrics": {
+   "efl": 1896.52268,
+   "fno": 1.92,
+   "ttl": 0.8117,
+   "defocus": 1895.83341,
+   "hfov_deg": 39.76,
+   "assumptions": [
+    "no stop labelled: stop placed at first refracting surface"
+   ],
+   "n_lenses": 2,
+   "imgh_real": 0.51673,
+   "distortion_pct": -7.12555,
+   "mtf_freq_lpmm": 221.59349,
+   "fields": [
+    {
+     "Hy": 0.0,
+     "rms_um": 432453.31748,
+     "mtf_t": 0.16249,
+     "mtf_s": 0.1729,
+     "vignetted_frac": 0.0,
+     "outlier_frac": 0.0
+    },
+    {
+     "Hy": 0.5,
+     "rms_um": 386215.64741,
+     "mtf_t": 0.03626,
+     "mtf_s": 0.06077,
+     "vignetted_frac": 0.1811,
+     "outlier_frac": 0.0
+    },
+    {
+     "Hy": 0.7,
+     "rms_um": 366445.64932,
+     "mtf_t": 0.08509,
+     "mtf_s": 0.11641,
+     "vignetted_frac": 0.24409,
+     "outlier_frac": 0.0
+    },
+    {
+     "Hy": 0.85,
+     "rms_um": 348124.443,
+     "mtf_t": 0.03323,
+     "mtf_s": 0.09895,
+     "vignetted_frac": 0.31496,
+     "outlier_frac": 0.0
+    },
+    {
+     "Hy": 1.0,
+     "rms_um": 337727.48029,
+     "mtf_t": 0.11066,
+     "mtf_s": 0.02803,
+     "vignetted_frac": 0.34646,
+     "outlier_frac": 0.0
+    }
+   ],
+   "rms_um_mean": 374193.3075,
+   "full_field_vignetted": false,
+   "mtf_mean": 0.09048,
+   "airy_um": 1.37639,
+   "min_center_thickness": 0.02,
+   "min_edge_thickness": null
+  },
+  "tolerances": {
+   "efl_rel": 0.01,
+   "ttl_abs": 0.02,
+   "ttl_rel": 0.005,
+   "imgh_rel": 0.03,
+   "defocus_dof": 3.0,
+   "rms_um": 15.0
+  },
+  "refined": {
+   "nd": {
+    "1.41/50.0": 1.415,
+    "1.29/100.0": 1.295,
+    "1.52/64.2": 1.515
+   },
+   "checks": {
+    "ttl": {
+     "claimed": 7.53,
+     "computed": 0.8117,
+     "abs_err": -6.7183,
+     "pass": false
+    },
+    "imgh": {
+     "claimed": 4.9,
+     "computed": 0.5163,
+     "rel_err": -0.8946,
+     "pass": false
+    },
+    "focus": {
+     "defocus_mm": 1863.69,
+     "dof_mm": 0.0043,
+     "pass": false
+    },
+    "image_quality": {
+     "rms_um_mean": 373671.758,
+     "limit_um": 15.0,
+     "pass": false
+    }
+   },
+   "metrics": {
+    "efl": 1864.37847,
+    "fno": 1.92,
+    "ttl": 0.8117,
+    "defocus": 1863.68999,
+    "hfov_deg": 39.76,
+    "assumptions": [
+     "no stop labelled: stop placed at first refracting surface"
+    ],
+    "n_lenses": 2,
+    "imgh_real": 0.51634,
+    "distortion_pct": -7.1456,
+    "mtf_freq_lpmm": 221.59349,
+    "fields": [
+     {
+      "Hy": 0.0,
+      "rms_um": 421225.45561,
+      "mtf_t": 0.08939,
+      "mtf_s": 0.00236,
+      "vignetted_frac": 0.0,
+      "outlier_frac": 0.0
+     },
+     {
+      "Hy": 0.5,
+      "rms_um": 386202.30442,
+      "mtf_t": 0.05594,
+      "mtf_s": 0.07686,
+      "vignetted_frac": 0.16535,
+      "outlier_frac": 0.0
+     },
+     {
+      "Hy": 0.7,
+      "rms_um": 377146.8558,
+      "mtf_t": 0.04161,
+      "mtf_s": 0.06372,
+      "vignetted_frac": 0.2126,
+      "outlier_frac": 0.0
+     },
+     {
+      "Hy": 0.85,
+      "rms_um": 354033.07314,
+      "mtf_t": 0.07811,
+      "mtf_s": 0.0425,
+      "vignetted_frac": 0.28346,
+      "outlier_frac": 0.0
+     },
+     {
+      "Hy": 1.0,
+      "rms_um": 329751.09875,
+      "mtf_t": 0.064,
+      "mtf_s": 0.0037,
+      "vignetted_frac": 0.34646,
+      "outlier_frac": 0.0
+     }
+    ],
+    "rms_um_mean": 373671.75754,
+    "full_field_vignetted": false,
+    "mtf_mean": 0.05182,
+    "airy_um": 1.37639,
+    "min_center_thickness": 0.02,
+    "min_edge_thickness": null
+   }
+  },
+  "notes": [
+   "no image row in table; appended image after last row"
+  ],
+  "failed_checks": [
+   "ttl",
+   "imgh",
+   "focus",
+   "image_quality"
+  ]
+ }
+}

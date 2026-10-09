@@ -1,0 +1,299 @@
+{
+ "schema_version": "0.1",
+ "id": "CN216792560U-ex4",
+ "source": {
+  "patent": "CN216792560U",
+  "url": "https://patents.google.com/patent/CN216792560U/zh",
+  "title": "Imaging lens",
+  "assignee": "Zhejiang Sunny Optics Co Ltd",
+  "date": "2022-06-21",
+  "embodiment": 4,
+  "table": "Table 17",
+  "pdf_url": "https://patentimages.storage.googleapis.com/90/1b/f9/cc336b6e80871e/CN216792560U.pdf"
+ },
+ "claimed": {
+  "ttl": 7.52,
+  "imgh": 4.9,
+  "hfov_deg": 40.08,
+  "fno": 1.9
+ },
+ "wavelengths_um": [
+  0.4861327,
+  0.5875618,
+  0.6562725
+ ],
+ "primary_wavelength_um": 0.5875618,
+ "surfaces": [
+  {
+   "name": "OBJ",
+   "radius": "inf",
+   "thickness": "inf",
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "object"
+  },
+  {
+   "name": "S3",
+   "radius": -550.0,
+   "thickness": 0.07,
+   "nd": 1.41,
+   "vd": 50.0,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S4",
+   "radius": -550.0,
+   "thickness": 0.2,
+   "nd": 1.29,
+   "vd": 100.0,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S5",
+   "radius": "inf",
+   "thickness": 0.02,
+   "nd": 1.41,
+   "vd": 50.0,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S6",
+   "radius": "inf",
+   "thickness": 0.21,
+   "nd": 1.52,
+   "vd": 64.2,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S7",
+   "radius": "inf",
+   "thickness": 0.2552,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "IMA",
+   "radius": "inf",
+   "thickness": 0.0,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "image"
+  }
+ ],
+ "provenance": {
+  "method": "google_patents_text_table",
+  "extractor": "lenszoo.extract.gpatents 0.1",
+  "aspheric_tables": 0,
+  "warnings": [
+   "no image row in table; appended image after last row"
+  ]
+ },
+ "verification": {
+  "status": "needs_review",
+  "checks": {
+   "ttl": {
+    "claimed": 7.52,
+    "computed": 0.7552,
+    "abs_err": -6.7648,
+    "pass": false
+   },
+   "imgh": {
+    "claimed": 4.9,
+    "computed": 0.4743,
+    "rel_err": -0.9032,
+    "pass": false
+   },
+   "focus": {
+    "defocus_mm": -1897.2135,
+    "dof_mm": 0.0042,
+    "pass": false
+   },
+   "image_quality": {
+    "rms_um_mean": 379210.259,
+    "limit_um": 15.0,
+    "pass": false
+   }
+  },
+  "metrics": {
+   "efl": -1896.58077,
+   "fno": 1.9,
+   "ttl": 0.7552,
+   "defocus": -1897.21354,
+   "hfov_deg": 40.08,
+   "assumptions": [
+    "no stop labelled: stop placed at first refracting surface"
+   ],
+   "n_lenses": 2,
+   "imgh_real": 0.47433,
+   "distortion_pct": -7.92826,
+   "mtf_freq_lpmm": 223.92605,
+   "fields": [
+    {
+     "Hy": 0.0,
+     "rms_um": 440698.93185,
+     "mtf_t": 0.10714,
+     "mtf_s": 0.08501,
+     "vignetted_frac": 0.0,
+     "outlier_frac": 0.0
+    },
+    {
+     "Hy": 0.5,
+     "rms_um": 384532.15889,
+     "mtf_t": 0.13623,
+     "mtf_s": 0.0291,
+     "vignetted_frac": 0.19685,
+     "outlier_frac": 0.0
+    },
+    {
+     "Hy": 0.7,
+     "rms_um": 371162.17586,
+     "mtf_t": 0.0426,
+     "mtf_s": 0.06936,
+     "vignetted_frac": 0.25197,
+     "outlier_frac": 0.0
+    },
+    {
+     "Hy": 0.85,
+     "rms_um": 355094.83006,
+     "mtf_t": 0.12387,
+     "mtf_s": 0.06612,
+     "vignetted_frac": 0.31496,
+     "outlier_frac": 0.0
+    },
+    {
+     "Hy": 1.0,
+     "rms_um": 344563.19628,
+     "mtf_t": 0.04631,
+     "mtf_s": 0.00429,
+     "vignetted_frac": 0.34646,
+     "outlier_frac": 0.0
+    }
+   ],
+   "rms_um_mean": 379210.25859,
+   "full_field_vignetted": false,
+   "mtf_mean": 0.071,
+   "airy_um": 1.36206,
+   "min_center_thickness": 0.02,
+   "min_edge_thickness": null
+  },
+  "tolerances": {
+   "efl_rel": 0.01,
+   "ttl_abs": 0.02,
+   "ttl_rel": 0.005,
+   "imgh_rel": 0.03,
+   "defocus_dof": 3.0,
+   "rms_um": 15.0
+  },
+  "refined": {
+   "nd": {
+    "1.41/50.0": 1.405,
+    "1.29/100.0": 1.295,
+    "1.52/64.2": 1.525
+   },
+   "checks": {
+    "ttl": {
+     "claimed": 7.52,
+     "computed": 0.7552,
+     "abs_err": -6.7648,
+     "pass": false
+    },
+    "imgh": {
+     "claimed": 4.9,
+     "computed": 0.4736,
+     "rel_err": -0.9034,
+     "pass": false
+    },
+    "focus": {
+     "defocus_mm": -1865.0623,
+     "dof_mm": 0.0042,
+     "pass": false
+    },
+    "image_quality": {
+     "rms_um_mean": 371393.953,
+     "limit_um": 15.0,
+     "pass": false
+    }
+   },
+   "metrics": {
+    "efl": -1864.43229,
+    "fno": 1.9,
+    "ttl": 0.7552,
+    "defocus": -1865.06227,
+    "hfov_deg": 40.08,
+    "assumptions": [
+     "no stop labelled: stop placed at first refracting surface"
+    ],
+    "n_lenses": 2,
+    "imgh_real": 0.47355,
+    "distortion_pct": -7.95471,
+    "mtf_freq_lpmm": 223.92605,
+    "fields": [
+     {
+      "Hy": 0.0,
+      "rms_um": 428821.39765,
+      "mtf_t": 0.19362,
+      "mtf_s": 0.08958,
+      "vignetted_frac": 0.0,
+      "outlier_frac": 0.0
+     },
+     {
+      "Hy": 0.5,
+      "rms_um": 382772.56878,
+      "mtf_t": 0.04533,
+      "mtf_s": 0.02138,
+      "vignetted_frac": 0.1811,
+      "outlier_frac": 0.0
+     },
+     {
+      "Hy": 0.7,
+      "rms_um": 363890.32913,
+      "mtf_t": 0.1029,
+      "mtf_s": 0.20953,
+      "vignetted_frac": 0.24409,
+      "outlier_frac": 0.0
+     },
+     {
+      "Hy": 0.85,
+      "rms_um": 345738.37744,
+      "mtf_t": 0.07264,
+      "mtf_s": 0.0065,
+      "vignetted_frac": 0.31496,
+      "outlier_frac": 0.0
+     },
+     {
+      "Hy": 1.0,
+      "rms_um": 335747.09353,
+      "mtf_t": 0.07173,
+      "mtf_s": 0.04912,
+      "vignetted_frac": 0.34646,
+      "outlier_frac": 0.0
+     }
+    ],
+    "rms_um_mean": 371393.95331,
+    "full_field_vignetted": false,
+    "mtf_mean": 0.08623,
+    "airy_um": 1.36206,
+    "min_center_thickness": 0.02,
+    "min_edge_thickness": null
+   }
+  },
+  "notes": [
+   "no image row in table; appended image after last row"
+  ],
+  "failed_checks": [
+   "ttl",
+   "imgh",
+   "focus",
+   "image_quality"
+  ]
+ }
+}

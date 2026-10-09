@@ -1,0 +1,42 @@
+{
+ "id": "T12-ultrawide-f2.5",
+ "title": "Ultra-wide 6-element lens HFOV 50 deg F/2.2",
+ "prompt": "Design a phone camera lens that meets the spec.",
+ "spec": {
+  "efl": 2.5,
+  "fno": 2.2,
+  "hfov_deg": 50.0,
+  "ttl_max": 4.0,
+  "wavelengths_um": [
+   0.4861327,
+   0.5875618,
+   0.6562725
+  ],
+  "primary_wavelength_um": 0.5875618,
+  "object": "inf"
+ },
+ "constraints": {
+  "efl_tol_rel": 0.02,
+  "min_center_thickness": 0.2,
+  "max_elements": 6,
+  "max_distortion_pct": 8.0
+ },
+ "scoring": {
+  "fields": [
+   0,
+   0.5,
+   0.7,
+   0.85,
+   1.0
+  ]
+ },
+ "reference": {
+  "spec_source": "synthetic",
+  "exclude_patents": []
+ },
+ "tags": [
+  "synthetic",
+  "wide",
+  "hard"
+ ]
+}

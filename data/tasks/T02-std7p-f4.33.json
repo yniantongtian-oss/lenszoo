@@ -1,0 +1,44 @@
+{
+ "id": "T02-std7p-f4.33",
+ "title": "7-element standard-angle lens, f=4.33 mm F/2.5",
+ "prompt": "Design a phone camera lens that meets the spec.",
+ "spec": {
+  "efl": 4.33,
+  "fno": 2.5,
+  "hfov_deg": 27.84,
+  "ttl_max": 4.85,
+  "wavelengths_um": [
+   0.4861327,
+   0.5875618,
+   0.6562725
+  ],
+  "primary_wavelength_um": 0.5875618,
+  "object": "inf"
+ },
+ "constraints": {
+  "efl_tol_rel": 0.02,
+  "min_center_thickness": 0.2,
+  "max_elements": 7,
+  "max_distortion_pct": 3.0
+ },
+ "scoring": {
+  "fields": [
+   0,
+   0.5,
+   0.7,
+   0.85,
+   1.0
+  ]
+ },
+ "reference": {
+  "spec_source": "CN105116519B embodiment 4 (claimed values in the patent text)",
+  "design_id": null,
+  "exclude_patents": [
+   "CN105116519B"
+  ]
+ },
+ "tags": [
+  "patent-spec",
+  "7P"
+ ]
+}

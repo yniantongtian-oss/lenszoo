@@ -1,0 +1,211 @@
+{
+ "schema_version": "0.1",
+ "id": "CN101606095B-ex1bbbb",
+ "source": {
+  "patent": "CN101606095B",
+  "url": "https://patents.google.com/patent/CN101606095B/zh",
+  "title": "Imaging lens, imaging device and portable terminal",
+  "assignee": "Konica Minolta Opto Inc",
+  "date": "2011-06-08",
+  "embodiment": 1,
+  "table": null,
+  "pdf_url": "https://patentimages.storage.googleapis.com/a7/84/9b/364db031ba79f2/CN101606095B.pdf"
+ },
+ "claimed": {},
+ "wavelengths_um": [
+  0.4861327,
+  0.5875618,
+  0.6562725
+ ],
+ "primary_wavelength_um": 0.5875618,
+ "surfaces": [
+  {
+   "name": "OBJ",
+   "radius": "inf",
+   "thickness": "inf",
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "object"
+  },
+  {
+   "name": "1",
+   "radius": 0.934,
+   "thickness": 0.362,
+   "nd": 1.48749,
+   "vd": 70.45,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "2(APE)",
+   "radius": "inf",
+   "thickness": 0.427,
+   "nd": 1.68855,
+   "vd": 47.43,
+   "conic": 0.0,
+   "is_stop": true,
+   "role": "stop"
+  },
+  {
+   "name": "3",
+   "radius": "inf",
+   "thickness": 0.074,
+   "nd": 1.68893,
+   "vd": 31.16,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "4",
+   "radius": 2.194,
+   "thickness": 0.726,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "5",
+   "radius": 4.356,
+   "thickness": 0.124,
+   "nd": 1.53048,
+   "vd": 55.72,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "6",
+   "radius": "inf",
+   "thickness": 0.362,
+   "nd": 1.68855,
+   "vd": 47.43,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "7",
+   "radius": "inf",
+   "thickness": 0.619,
+   "nd": 1.53048,
+   "vd": 55.72,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "8",
+   "radius": 6.134,
+   "thickness": 0.753,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "9",
+   "radius": "inf",
+   "thickness": 0.0,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "image"
+  }
+ ],
+ "provenance": {
+  "method": "google_patents_text_table",
+  "extractor": "lenszoo.extract.gpatents 0.1",
+  "aspheric_tables": 0,
+  "warnings": []
+ },
+ "verification": {
+  "status": "needs_review",
+  "checks": {
+   "focus": {
+    "defocus_mm": -0.0009,
+    "dof_mm": 0.0047,
+    "pass": true
+   },
+   "image_quality": {
+    "rms_um_mean": 287.113,
+    "limit_um": 15.0,
+    "pass": false
+   }
+  },
+  "metrics": {
+   "efl": 2.97757,
+   "fno": 2.0,
+   "ttl": 3.447,
+   "defocus": -0.00093,
+   "hfov_deg": 30.0,
+   "assumptions": [
+    "F-number not stated: assumed F/2.0",
+    "HFOV and ImgH not stated: assumed 30 deg"
+   ],
+   "n_lenses": 4,
+   "imgh_real": 1.8149,
+   "distortion_pct": 5.53052,
+   "mtf_freq_lpmm": 212.72975,
+   "fields": [
+    {
+     "Hy": 0.0,
+     "rms_um": 154.31461,
+     "mtf_t": 0.11817,
+     "mtf_s": 0.05451,
+     "vignetted_frac": 0.0,
+     "outlier_frac": 0.0
+    },
+    {
+     "Hy": 0.5,
+     "rms_um": 243.01402,
+     "mtf_t": 0.03007,
+     "mtf_s": 0.03085,
+     "vignetted_frac": 0.0,
+     "outlier_frac": 0.0
+    },
+    {
+     "Hy": 0.7,
+     "rms_um": 339.39413,
+     "mtf_t": 0.11943,
+     "mtf_s": 0.01552,
+     "vignetted_frac": 0.0,
+     "outlier_frac": 0.00787
+    },
+    {
+     "Hy": 0.85,
+     "rms_um": 341.44064,
+     "mtf_t": 0.01051,
+     "mtf_s": 0.15211,
+     "vignetted_frac": 0.05512,
+     "outlier_frac": 0.0
+    },
+    {
+     "Hy": 1.0,
+     "rms_um": 357.40381,
+     "mtf_t": 0.14518,
+     "mtf_s": 0.13842,
+     "vignetted_frac": 0.08661,
+     "outlier_frac": 0.0
+    }
+   ],
+   "rms_um_mean": 287.11345,
+   "full_field_vignetted": false,
+   "mtf_mean": 0.08148,
+   "airy_um": 1.43374,
+   "min_center_thickness": 0.074,
+   "min_edge_thickness": null
+  },
+  "tolerances": {
+   "efl_rel": 0.01,
+   "ttl_abs": 0.02,
+   "ttl_rel": 0.005,
+   "imgh_rel": 0.03,
+   "defocus_dof": 3.0,
+   "rms_um": 15.0
+  },
+  "notes": [],
+  "failed_checks": [
+   "image_quality"
+  ]
+ }
+}

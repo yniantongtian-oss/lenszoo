@@ -1,0 +1,140 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "LensZoo prescription",
+ "type": "object",
+ "required": [
+  "id",
+  "surfaces"
+ ],
+ "properties": {
+  "schema_version": {
+   "type": "string"
+  },
+  "id": {
+   "type": "string",
+   "description": "e.g. CN114740587B-ex1"
+  },
+  "source": {
+   "type": "object",
+   "properties": {
+    "patent": {
+     "type": "string"
+    },
+    "url": {
+     "type": "string"
+    },
+    "title": {
+     "type": "string"
+    },
+    "assignee": {
+     "type": "string"
+    },
+    "date": {
+     "type": "string"
+    },
+    "embodiment": {
+     "type": "integer"
+    },
+    "table": {
+     "type": ["string", "null"]
+    }
+   }
+  },
+  "claimed": {
+   "type": "object",
+   "properties": {
+    "efl": {
+     "type": "number"
+    },
+    "fno": {
+     "type": "number"
+    },
+    "hfov_deg": {
+     "type": "number"
+    },
+    "ttl": {
+     "type": "number"
+    },
+    "imgh": {
+     "type": "number"
+    },
+    "bfl": {
+     "type": "number"
+    }
+   }
+  },
+  "wavelengths_um": {
+   "type": "array",
+   "items": {
+    "type": "number"
+   }
+  },
+  "primary_wavelength_um": {
+   "type": "number"
+  },
+  "surfaces": {
+   "type": "array",
+   "minItems": 3,
+   "items": {
+    "type": "object",
+    "required": [
+     "name"
+    ],
+    "properties": {
+     "name": {
+      "type": "string"
+     },
+     "role": {
+      "enum": [
+       "object",
+       "stop",
+       "surface",
+       "image"
+      ]
+     },
+     "radius": {
+      "type": [
+       "number",
+       "string"
+      ]
+     },
+     "thickness": {
+      "type": [
+       "number",
+       "string"
+      ]
+     },
+     "nd": {
+      "type": "number"
+     },
+     "vd": {
+      "type": "number"
+     },
+     "glass": {
+      "type": "string"
+     },
+     "conic": {
+      "type": "number"
+     },
+     "aspheric": {
+      "type": "object",
+      "patternProperties": {
+       "^A[0-9]+$": {
+        "type": "number"
+       }
+      }
+     },
+     "is_stop": {
+      "type": "boolean"
+     }
+    }
+   }
+  },
+  "provenance": {
+   "type": "object"
+  },
+  "verification": {
+   "type": "object"
+  }
+ }
+}

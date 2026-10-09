@@ -1,0 +1,230 @@
+{
+ "schema_version": "0.1",
+ "id": "CN101131464B-ex1",
+ "source": {
+  "patent": "CN101131464B",
+  "url": "https://patents.google.com/patent/CN101131464B/zh",
+  "title": "Imaging lens, imaging device and portable terminal",
+  "assignee": "Konica Minolta Opto Inc",
+  "date": "2010-10-27",
+  "embodiment": 1,
+  "table": null,
+  "pdf_url": "https://patentimages.storage.googleapis.com/64/6f/4a/c97e17a69282c3/CN101131464B.pdf"
+ },
+ "claimed": {
+  "efl": 3.79
+ },
+ "wavelengths_um": [
+  0.4861327,
+  0.5875618,
+  0.6562725
+ ],
+ "primary_wavelength_um": 0.5875618,
+ "surfaces": [
+  {
+   "name": "OBJ",
+   "radius": "inf",
+   "thickness": "inf",
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "object"
+  },
+  {
+   "name": "Stop",
+   "radius": "inf",
+   "thickness": 0.05,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "1",
+   "radius": 2.367,
+   "thickness": 0.79,
+   "nd": 1.58913,
+   "vd": 61.2,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "2",
+   "radius": -7.785,
+   "thickness": 0.1,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "3",
+   "radius": 12.523,
+   "thickness": 0.55,
+   "nd": 1.583,
+   "vd": 30.0,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "4",
+   "radius": 1.872,
+   "thickness": 0.56,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "5",
+   "radius": -301.066,
+   "thickness": 1.12,
+   "nd": 1.5318,
+   "vd": 56.0,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "6",
+   "radius": -1.694,
+   "thickness": 0.88,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "7",
+   "radius": -1.703,
+   "thickness": 0.7,
+   "nd": 1.5318,
+   "vd": 56.0,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "8",
+   "radius": -2015.07,
+   "thickness": 0.3,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "IMA",
+   "radius": "inf",
+   "thickness": 0.0,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "image"
+  }
+ ],
+ "provenance": {
+  "method": "google_patents_text_table",
+  "extractor": "lenszoo.extract.gpatents 0.1",
+  "aspheric_tables": 0,
+  "warnings": [
+   "no image row in table; appended image after last row"
+  ]
+ },
+ "verification": {
+  "status": "needs_review",
+  "checks": {
+   "efl": {
+    "claimed": 3.79,
+    "computed": 4.698,
+    "rel_err": 0.2396,
+    "pass": false
+   },
+   "focus": {
+    "defocus_mm": 0.5976,
+    "dof_mm": 0.0047,
+    "pass": false
+   },
+   "image_quality": {
+    "rms_um_mean": 217.528,
+    "limit_um": 15.0,
+    "pass": false
+   }
+  },
+  "metrics": {
+   "efl": 4.69802,
+   "fno": 2.0,
+   "ttl": 5.0,
+   "defocus": 0.59759,
+   "hfov_deg": 30.0,
+   "assumptions": [
+    "no stop labelled: stop placed at first refracting surface",
+    "F-number not stated: assumed F/2.0",
+    "HFOV and ImgH not stated: assumed 30 deg"
+   ],
+   "n_lenses": 4,
+   "imgh_real": 2.66048,
+   "distortion_pct": 18.0345,
+   "mtf_freq_lpmm": 212.72975,
+   "fields": [
+    {
+     "Hy": 0.0,
+     "rms_um": 112.49663,
+     "mtf_t": 0.08498,
+     "mtf_s": 0.04354,
+     "vignetted_frac": 0.0,
+     "outlier_frac": 0.0
+    },
+    {
+     "Hy": 0.5,
+     "rms_um": 148.11275,
+     "mtf_t": 0.0592,
+     "mtf_s": 0.04659,
+     "vignetted_frac": 0.0,
+     "outlier_frac": 0.08661
+    },
+    {
+     "Hy": 0.7,
+     "rms_um": 204.52568,
+     "mtf_t": 0.04644,
+     "mtf_s": 0.06444,
+     "vignetted_frac": 0.0,
+     "outlier_frac": 0.09711
+    },
+    {
+     "Hy": 0.85,
+     "rms_um": 259.05867,
+     "mtf_t": 0.08853,
+     "mtf_s": 0.12572,
+     "vignetted_frac": 0.03937,
+     "outlier_frac": 0.06557
+    },
+    {
+     "Hy": 1.0,
+     "rms_um": 363.44492,
+     "mtf_t": 0.05637,
+     "mtf_s": 0.04409,
+     "vignetted_frac": 0.05512,
+     "outlier_frac": 0.03333
+    }
+   ],
+   "rms_um_mean": 217.52773,
+   "full_field_vignetted": false,
+   "mtf_mean": 0.06599,
+   "airy_um": 1.43374,
+   "min_center_thickness": 0.55,
+   "min_edge_thickness": 0.08284
+  },
+  "tolerances": {
+   "efl_rel": 0.01,
+   "ttl_abs": 0.02,
+   "ttl_rel": 0.005,
+   "imgh_rel": 0.03,
+   "defocus_dof": 3.0,
+   "rms_um": 15.0
+  },
+  "notes": [
+   "no image row in table; appended image after last row"
+  ],
+  "failed_checks": [
+   "efl",
+   "focus",
+   "image_quality"
+  ]
+ }
+}

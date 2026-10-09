@@ -1,0 +1,45 @@
+{
+ "id": "T08-bigsensor-f4.96",
+ "title": "Large-sensor 7-element lens f=4.96 mm, ImgH 5.35, TTL<=6.14",
+ "prompt": "Design a phone camera lens that meets the spec.",
+ "spec": {
+  "efl": 4.96,
+  "fno": 1.9,
+  "hfov_deg": 47.17,
+  "ttl_max": 6.14,
+  "wavelengths_um": [
+   0.4861327,
+   0.5875618,
+   0.6562725
+  ],
+  "primary_wavelength_um": 0.5875618,
+  "object": "inf"
+ },
+ "constraints": {
+  "efl_tol_rel": 0.02,
+  "min_center_thickness": 0.2,
+  "max_elements": 7,
+  "max_distortion_pct": 3.0
+ },
+ "scoring": {
+  "fields": [
+   0,
+   0.5,
+   0.7,
+   0.85,
+   1.0
+  ]
+ },
+ "reference": {
+  "spec_source": "CN114740587B embodiment 1 (claimed values in the patent text); HFOV derived as atan(ImgH/f), F/1.9 chosen by LensZoo",
+  "design_id": null,
+  "exclude_patents": [
+   "CN114740587B"
+  ]
+ },
+ "tags": [
+  "patent-spec",
+  "main",
+  "large-sensor"
+ ]
+}

@@ -1,0 +1,13 @@
+CN105116519B: 12 text prescription table(s), 0 image-only table(s)
+  CN105116519B-ex1       verified_refined  claimed={'efl': 3.98, 'ttl': 4.57, 'fno': 2.2, 'hfov_deg': 36.62} failed=[]
+  CN105116519B-ex2       verified          claimed={'efl': 4.04, 'ttl': 4.67, 'fno': 2.2, 'hfov_deg': 36.4} failed=[]
+  CN105116519B-ex3       verified_refined  claimed={'efl': 3.85, 'ttl': 4.47, 'fno': 2.2, 'hfov_deg': 37.73} failed=[]
+  CN105116519B-ex4       needs_review      claimed={'efl': 4.33, 'ttl': 4.85, 'fno': 2.5, 'hfov_deg': 27.84} failed=['focus', 'image_quality']
+  CN105116519B-ex5       needs_review      claimed={'efl': 4.0, 'ttl': 4.54, 'fno': 2.2, 'hfov_deg': 37.62} failed=['focus', 'image_quality']
+  CN105116519B-ex6       needs_review      claimed={'efl': 4.05, 'ttl': 4.5, 'fno': 2.3, 'hfov_deg': 37.32} failed=['efl', 'ttl', 'focus', 'image_quality']
+  CN105116519B-ex7       needs_review      claimed={'efl': 4.31, 'ttl': 4.75, 'fno': 2.4, 'hfov_deg': 29.11} failed=['focus', 'image_quality']
+  CN105116519B-ex8       needs_review      claimed={'efl': 4.3, 'ttl': 4.8, 'fno': 2.5, 'hfov_deg': 28.03} failed=['focus', 'image_quality']
+  CN105116519B-ex9       needs_review      claimed={'efl': 4.28, 'ttl': 4.75, 'fno': 2.5, 'hfov_deg': 27.91} failed=['focus', 'image_quality']
+  CN105116519B-ex10      needs_review      claimed={'efl': 4.32, 'ttl': 4.78, 'fno': 2.52, 'hfov_deg': 34.76} failed=['focus', 'image_quality']
+  CN105116519B-ex11      needs_review      claimed={'efl': 3.98, 'ttl': 4.36, 'fno': 2.6, 'hfov_deg': 37.79} failed=['focus', 'image_quality']
+  CN105116519B-ex12      needs_review      claimed={'efl': 3.97, 'ttl': 4.57, 'fno': 2.2, 'hfov_deg': 38.14} failed=['focus', 'image_quality']

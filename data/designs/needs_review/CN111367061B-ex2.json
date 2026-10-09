@@ -1,0 +1,326 @@
+{
+ "schema_version": "0.1",
+ "id": "CN111367061B-ex2",
+ "source": {
+  "patent": "CN111367061B",
+  "url": "https://patents.google.com/patent/CN111367061B/zh",
+  "title": "Optical imaging lens and imaging device",
+  "assignee": "Jiangxi Lianchuang Electronic Co Ltd",
+  "date": "2020-09-04",
+  "embodiment": 2,
+  "table": null,
+  "pdf_url": "https://patentimages.storage.googleapis.com/0b/5e/41/110082964320e9/CN111367061B.pdf"
+ },
+ "claimed": {},
+ "wavelengths_um": [
+  0.4861327,
+  0.5875618,
+  0.6562725
+ ],
+ "primary_wavelength_um": 0.5875618,
+ "surfaces": [
+  {
+   "name": "Object",
+   "radius": "inf",
+   "thickness": "inf",
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "object"
+  },
+  {
+   "name": "S1",
+   "radius": 19.544,
+   "thickness": 1.398,
+   "nd": 1.517,
+   "vd": 52.19,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S2",
+   "radius": 4.447,
+   "thickness": 2.511,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S3",
+   "radius": 9.411,
+   "thickness": 0.893,
+   "nd": 1.587,
+   "vd": 59.59,
+   "conic": 0.0,
+   "aspheric": {
+    "A6": -0.0004697231,
+    "A8": -2.598154e-05,
+    "A10": 1.342681e-06,
+    "A12": -2.138906e-08,
+    "A14": 0.0
+   },
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S4",
+   "radius": 3.906,
+   "thickness": 3.104,
+   "conic": -0.573774,
+   "aspheric": {
+    "A6": -0.001195919,
+    "A8": -0.0001129215,
+    "A10": 3.394615e-06,
+    "A12": -1.359029e-07,
+    "A14": 0.0
+   },
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S5",
+   "radius": 11.017,
+   "thickness": 3.109,
+   "nd": 1.788,
+   "vd": 47.52,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S6",
+   "radius": -16.309,
+   "thickness": 3.001,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "ST",
+   "radius": "inf",
+   "thickness": 1.066,
+   "conic": 0.0,
+   "is_stop": true,
+   "role": "stop"
+  },
+  {
+   "name": "S7",
+   "radius": -5.303,
+   "thickness": 0.89,
+   "nd": 1.603,
+   "vd": 38.01,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S8",
+   "radius": -37.924,
+   "thickness": 0.107,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S9",
+   "radius": 9.149,
+   "thickness": 2.075,
+   "nd": 1.593,
+   "vd": 68.53,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S10",
+   "radius": -7.544,
+   "thickness": 0.355,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S11",
+   "radius": 9.772,
+   "thickness": 3.108,
+   "nd": 1.593,
+   "vd": 68.53,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S12",
+   "radius": -4.203,
+   "thickness": 0.592,
+   "nd": 1.801,
+   "vd": 34.97,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S13",
+   "radius": -46.995,
+   "thickness": 0.693,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S14",
+   "radius": -27.097,
+   "thickness": 0.993,
+   "nd": 1.589,
+   "vd": 61.25,
+   "conic": -7.6482,
+   "aspheric": {
+    "A6": -0.003347509,
+    "A8": -5.820194e-05,
+    "A10": 4.279014e-06,
+    "A12": 1.51877e-06,
+    "A14": -7.946838e-08
+   },
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S15",
+   "radius": -20.724,
+   "thickness": 1.135,
+   "conic": 10.000001,
+   "aspheric": {
+    "A6": -0.001027673,
+    "A8": -5.733372e-05,
+    "A10": 1.152315e-05,
+    "A12": 1.900409e-07,
+    "A14": -2.04745e-08
+   },
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S16",
+   "radius": "inf",
+   "thickness": 0.5,
+   "nd": 1.517,
+   "vd": 64.21,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S17",
+   "radius": "inf",
+   "thickness": 4.047,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "S18",
+   "radius": "inf",
+   "thickness": 0.0,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "image"
+  }
+ ],
+ "provenance": {
+  "method": "google_patents_text_table",
+  "extractor": "lenszoo.extract.gpatents 0.1",
+  "aspheric_tables": 1,
+  "warnings": []
+ },
+ "verification": {
+  "status": "needs_review",
+  "checks": {
+   "focus": {
+    "defocus_mm": -0.0376,
+    "dof_mm": 0.0047,
+    "pass": false
+   },
+   "image_quality": {
+    "rms_um_mean": 738.44,
+    "limit_um": 15.0,
+    "pass": false
+   }
+  },
+  "metrics": {
+   "efl": 4.91777,
+   "fno": 2.0,
+   "ttl": 29.577,
+   "defocus": -0.03764,
+   "hfov_deg": 30.0,
+   "assumptions": [
+    "F-number not stated: assumed F/2.0",
+    "HFOV and ImgH not stated: assumed 30 deg"
+   ],
+   "n_lenses": 8,
+   "imgh_real": 3.27701,
+   "distortion_pct": 15.117,
+   "mtf_freq_lpmm": 212.72975,
+   "fields": [
+    {
+     "Hy": 0.0,
+     "rms_um": 39.76564,
+     "mtf_t": 0.00244,
+     "mtf_s": 0.02255,
+     "vignetted_frac": 0.0,
+     "outlier_frac": 0.0
+    },
+    {
+     "Hy": 0.5,
+     "rms_um": 587.70492,
+     "mtf_t": 0.0237,
+     "mtf_s": 0.0175,
+     "vignetted_frac": 0.0,
+     "outlier_frac": 0.0
+    },
+    {
+     "Hy": 0.7,
+     "rms_um": 915.01398,
+     "mtf_t": 0.09229,
+     "mtf_s": 0.12749,
+     "vignetted_frac": 0.11811,
+     "outlier_frac": 0.0
+    },
+    {
+     "Hy": 0.85,
+     "rms_um": 1411.2758,
+     "mtf_t": 0.04477,
+     "mtf_s": 0.10506,
+     "vignetted_frac": 0.23622,
+     "outlier_frac": 0.0
+    },
+    {
+     "Hy": 1.0,
+     "rms_um": null,
+     "mtf_t": 0.06622,
+     "mtf_s": 0.00113,
+     "vignetted_frac": 0.45407,
+     "outlier_frac": 0.01923
+    }
+   ],
+   "rms_um_mean": 738.44008,
+   "full_field_vignetted": true,
+   "mtf_mean": 0.05031,
+   "airy_um": 1.43374,
+   "min_center_thickness": 0.5,
+   "min_edge_thickness": null
+  },
+  "tolerances": {
+   "efl_rel": 0.01,
+   "ttl_abs": 0.02,
+   "ttl_rel": 0.005,
+   "imgh_rel": 0.03,
+   "defocus_dof": 3.0,
+   "rms_um": 15.0
+  },
+  "notes": [],
+  "failed_checks": [
+   "focus",
+   "image_quality"
+  ]
+ }
+}

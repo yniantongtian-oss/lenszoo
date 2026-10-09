@@ -1,0 +1,253 @@
+{
+ "schema_version": "0.1",
+ "id": "CN206209180U-ex2",
+ "source": {
+  "patent": "CN206209180U",
+  "url": "https://patents.google.com/patent/CN206209180U/zh",
+  "title": "Optical lens",
+  "assignee": "Ningbo Sunny Opotech Co Ltd",
+  "date": "2017-05-31",
+  "embodiment": 2,
+  "table": null,
+  "pdf_url": "https://patentimages.storage.googleapis.com/e2/2b/b5/8924c0ece2f14b/CN206209180U.pdf"
+ },
+ "claimed": {
+  "ttl": 17.94,
+  "fno": 2.0,
+  "hfov_deg": 30.0
+ },
+ "wavelengths_um": [
+  0.4861327,
+  0.5875618,
+  0.6562725
+ ],
+ "primary_wavelength_um": 0.5875618,
+ "surfaces": [
+  {
+   "name": "OBJ",
+   "radius": "inf",
+   "thickness": "inf",
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "object"
+  },
+  {
+   "name": "1",
+   "radius": -19.3808,
+   "thickness": 1.0,
+   "nd": 1.5168,
+   "vd": 64.2,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "2",
+   "radius": 4.2627,
+   "thickness": 3.713,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "3",
+   "radius": 6.3101,
+   "thickness": 2.8,
+   "nd": 1.804,
+   "vd": 46.57,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "4",
+   "radius": -21.6038,
+   "thickness": 2.2805,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "5",
+   "radius": "inf",
+   "thickness": 0.5165,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "6",
+   "radius": -4.5564,
+   "thickness": 0.6,
+   "nd": 1.5825,
+   "vd": 30.15,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "7",
+   "radius": 2.0801,
+   "thickness": 2.1673,
+   "nd": 1.5343,
+   "vd": 55.31,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "8",
+   "radius": -3.1304,
+   "thickness": 0.1,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "9",
+   "radius": 5.2512,
+   "thickness": 2.8,
+   "nd": 1.5116,
+   "vd": 56.82,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "10",
+   "radius": 6.2999,
+   "thickness": 0.5,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "11",
+   "radius": "inf",
+   "thickness": 0.55,
+   "nd": 1.5168,
+   "vd": 64.17,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "12",
+   "radius": "inf",
+   "thickness": 2.8377,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "surface"
+  },
+  {
+   "name": "IMA",
+   "radius": "inf",
+   "thickness": 0.0,
+   "conic": 0.0,
+   "is_stop": false,
+   "role": "image"
+  }
+ ],
+ "provenance": {
+  "method": "google_patents_text_table",
+  "extractor": "lenszoo.extract.gpatents 0.1",
+  "aspheric_tables": 0,
+  "warnings": []
+ },
+ "verification": {
+  "status": "needs_review",
+  "checks": {
+   "ttl": {
+    "claimed": 17.94,
+    "computed": 19.865,
+    "abs_err": 1.925,
+    "pass": false
+   },
+   "focus": {
+    "defocus_mm": 0.0106,
+    "dof_mm": 0.0047,
+    "pass": true
+   },
+   "image_quality": {
+    "rms_um_mean": 207.013,
+    "limit_um": 15.0,
+    "pass": false
+   }
+  },
+  "metrics": {
+   "efl": 4.68074,
+   "fno": 2.0,
+   "ttl": 19.865,
+   "defocus": 0.01064,
+   "hfov_deg": 30.0,
+   "assumptions": [
+    "no stop labelled: plane air surface 5 used as stop"
+   ],
+   "n_lenses": 5,
+   "imgh_real": 2.3393,
+   "distortion_pct": -13.32858,
+   "mtf_freq_lpmm": 212.72975,
+   "fields": [
+    {
+     "Hy": 0.0,
+     "rms_um": 197.25792,
+     "mtf_t": 0.11083,
+     "mtf_s": 0.16955,
+     "vignetted_frac": 0.0,
+     "outlier_frac": 0.0
+    },
+    {
+     "Hy": 0.5,
+     "rms_um": 177.69002,
+     "mtf_t": 0.03946,
+     "mtf_s": 0.11378,
+     "vignetted_frac": 0.0,
+     "outlier_frac": 0.0
+    },
+    {
+     "Hy": 0.7,
+     "rms_um": 217.89359,
+     "mtf_t": 0.049,
+     "mtf_s": 0.0395,
+     "vignetted_frac": 0.0,
+     "outlier_frac": 0.0
+    },
+    {
+     "Hy": 0.85,
+     "rms_um": 216.01763,
+     "mtf_t": 0.05981,
+     "mtf_s": 0.0356,
+     "vignetted_frac": 0.0,
+     "outlier_frac": 0.07087
+    },
+    {
+     "Hy": 1.0,
+     "rms_um": 226.20631,
+     "mtf_t": 0.07377,
+     "mtf_s": 0.03349,
+     "vignetted_frac": 0.04462,
+     "outlier_frac": 0.1044
+    }
+   ],
+   "rms_um_mean": 207.01309,
+   "full_field_vignetted": false,
+   "mtf_mean": 0.07248,
+   "airy_um": 1.43374,
+   "min_center_thickness": 0.55,
+   "min_edge_thickness": 0.55
+  },
+  "tolerances": {
+   "efl_rel": 0.01,
+   "ttl_abs": 0.02,
+   "ttl_rel": 0.005,
+   "imgh_rel": 0.03,
+   "defocus_dof": 3.0,
+   "rms_um": 15.0
+  },
+  "notes": [],
+  "failed_checks": [
+   "ttl",
+   "image_quality"
+  ]
+ }
+}

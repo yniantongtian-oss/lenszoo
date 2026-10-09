@@ -1,0 +1,15 @@
+CN105116519B-ex2: Imaging lens / Zhejiang Sunny Optics Co Ltd / 7 elements
+claimed by the patent: {'efl': 4.04, 'ttl': 4.67, 'fno': 2.2, 'hfov_deg': 36.4}
+verification: verified
+  efl           PASS  {"claimed": 4.04, "computed": 4.0453, "rel_err": 0.0013}
+  ttl           PASS  {"claimed": 4.67, "computed": 4.6708, "abs_err": 0.0008}
+  focus         PASS  {"defocus_mm": 0.0167, "dof_mm": 0.0057}
+  image_quality PASS  {"rms_um_mean": 2.559, "limit_um": 15.0}
+  RMS spot by field (um): [1.17, 2.74, 3.36, 2.18, 3.34]
+
+with a sign typo on S3 -> needs_review failed: ['efl', 'focus', 'image_quality']
+suggested single-edit fixes: [{'surface': 'S3', 'field': 'radius', 'from': 58.0389, 'to': -58.0389, 'kind': 'sign flip', 'efl_rel_err_after': 0.00131}, {'surface': 'S9', 'field': 'thickness', 'from': 0.265, 'to': 2.6500000000000004, 'kind': 'x10', 'efl_rel_err_after': 0.00312}]
+
+Design a phone camera lens that meets the spec.
+Spec: EFL = 4.04 mm (±2%), F/# = 2.2, half-FOV = 36.4 deg, TTL <= 4.67 mm, object at infinity, visible F/d/C. Constraints: at most 7 elements, center thickness >= 0.2 mm, |distortion| <= 3.0%. Return a LensZoo JSON prescription.
+reference design on its own task: {'score': 46.62, 'pass': True, 'Q_mtf_mean': 0.4662, 'rms_um_mean': 2.559, 'efl_rel_err': 0.0013}
