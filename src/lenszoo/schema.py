@@ -160,6 +160,8 @@ class Prescription:
 
     def scaled(self, k: float, new_id: str | None = None) -> "Prescription":
         """Return a copy scaled by factor k (radii, thicknesses, asphere terms)."""
+        if not math.isfinite(k) or k <= 0:
+            raise ValueError("scale factor must be a positive finite number")
         surfs = []
         for s in self.surfaces:
             d = s.to_dict()
@@ -188,24 +190,59 @@ class SchemaError(ValueError):
 
 def validate(d: dict) -> None:
     """Light-weight validation (no jsonschema dependency)."""
+    if not isinstance(d, dict):
+        raise SchemaError("prescription must be an object")
     for k in _REQUIRED_TOP:
         if k not in d:
             raise SchemaError(f"missing key: {k}")
     surfs = d["surfaces"]
     if not isinstance(surfs, list) or len(surfs) < 3:
         raise SchemaError("need at least object, one surface and image")
+    if not all(isinstance(s, dict) for s in surfs):
+        raise SchemaError("surface rows must be objects")
     roles = [s.get("role", "surface") for s in surfs]
     if roles[0] != "object":
         raise SchemaError("first surface must have role 'object'")
     if roles[-1] != "image":
         raise SchemaError("last surface must have role 'image'")
     for s in surfs:
+        for field in ('radius', 'thickness'):
+            if field in s:
+                try:
+                    value = _num(s[field])
+                except (TypeError, ValueError) as exc:
+                    raise SchemaError(f"invalid {field} on {s.get('name')}") from exc
+                if value is None or math.isnan(value):
+                    raise SchemaError(f"invalid {field} on {s.get('name')}")
+        for field in ('conic', 'vd'):
+            if s.get(field) is not None:
+                _finite(s[field], f"{field} on {s.get('name')}")
         for a in (s.get("aspheric") or {}):
             if not (a.startswith("A") and a[1:].isdigit() and int(a[1:]) % 2 == 0 and int(a[1:]) >= 4):
                 raise SchemaError(f"bad aspheric key {a} on {s.get('name')}")
+            _finite(s['aspheric'][a], f"{a} on {s.get('name')}")
         nd = s.get("nd")
         if nd is not None and not (1.0 <= float(nd) <= 2.6):
             raise SchemaError(f"implausible nd {nd} on {s.get('name')}")
+    wavelengths = d.get('wavelengths_um')
+    if wavelengths is not None:
+        if not isinstance(wavelengths, list) or not wavelengths:
+            raise SchemaError("wavelengths_um must be a nonempty array")
+        for value in wavelengths:
+            if _finite(value, 'wavelength') <= 0:
+                raise SchemaError("wavelengths must be positive")
+    if 'primary_wavelength_um' in d and _finite(d['primary_wavelength_um'], 'primary wavelength') <= 0:
+        raise SchemaError("primary wavelength must be positive")
+
+
+def _finite(value: Any, label: str) -> float:
+    try:
+        number = float(value)
+    except (TypeError, ValueError) as exc:
+        raise SchemaError(f"{label} must be numeric") from exc
+    if not math.isfinite(number):
+        raise SchemaError(f"{label} must be finite")
+    return number
 
 
 JSON_SCHEMA: dict = {

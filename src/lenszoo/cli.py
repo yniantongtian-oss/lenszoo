@@ -48,9 +48,11 @@ def cmd_verify(a):
     from .schema import Prescription
     from .verify import verify
 
+    failed = False
     for f in a.files:
         p = Prescription.load(f)
         v = verify(p)
+        failed = failed or v['status'] not in {'verified', 'verified_refined', 'plausible'}
         checks = v.get("refined", {}).get("checks") or v["checks"]
         print(f"{p.id:<22} {v['status']}")
         for k, c in checks.items():
@@ -59,7 +61,7 @@ def cmd_verify(a):
             print("   refined nd (within print rounding):", v["refined"]["nd"])
         if a.write:
             p.save(f)
-    return 0
+    return 1 if failed else 0
 
 
 def cmd_fixes(a):
