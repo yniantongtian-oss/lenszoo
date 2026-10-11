@@ -1,0 +1,14 @@
+{
+  "modules": [
+    "lenszoo",
+    "lenszoo.schema",
+    "lenszoo.cli"
+  ],
+  "cli": "lenszoo",
+  "extras": "",
+  "commands": [
+    [
+      "--help"
+    ]
+  ]
+}
