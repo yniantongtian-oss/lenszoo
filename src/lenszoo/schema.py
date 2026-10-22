@@ -16,7 +16,7 @@ from __future__ import annotations
 
 import json
 import math
-from dataclasses import asdict, dataclass, field
+from dataclasses import asdict, dataclass, field, fields
 from pathlib import Path
 from typing import Any
 
@@ -71,7 +71,8 @@ class Surface:
         d["radius"] = _num(d.get("radius", "inf"))
         d["thickness"] = _num(d.get("thickness", 0.0))
         d["aspheric"] = {k: float(v) for k, v in (d.get("aspheric") or {}).items()}
-        return cls(**d)
+        allowed = {item.name for item in fields(cls)}
+        return cls(**{k: v for k, v in d.items() if k in allowed})
 
     @property
     def is_aspheric(self) -> bool:
@@ -268,7 +269,8 @@ JSON_SCHEMA: dict = {
             "thickness": {"type": ["number", "string"]},
             "nd": {"type": "number"}, "vd": {"type": "number"}, "glass": {"type": "string"},
             "conic": {"type": "number"},
-            "aspheric": {"type": "object", "patternProperties": {"^A[0-9]+$": {"type": "number"}}},
+            "aspheric": {"type": "object", "additionalProperties": False,
+                         "patternProperties": {"^A([468]|[1-9][02468])$": {"type": "number"}}},
             "is_stop": {"type": "boolean"}}}},
         "provenance": {"type": "object"},
         "verification": {"type": "object"},

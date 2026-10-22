@@ -9,6 +9,8 @@
 
 Only factual numeric data (surface numbers, radii, thicknesses, indices, Abbe numbers, conic and asphere coefficients) plus bibliographic citations are stored. No patent prose or figures are copied.
 
+`needs_review/` was audited in v0.2 and not promoted. [TRIAGE.md](designs/TRIAGE.md) records the reason for each file. `lenszoo audit` checks that every file's folder, id and `failed_checks` still agree with that report.
+
 The HTML cache `raw/` is git-ignored and must not be redistributed.
 
 ## tasks/

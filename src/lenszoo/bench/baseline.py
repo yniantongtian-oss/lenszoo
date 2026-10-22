@@ -49,6 +49,10 @@ def spec_distance(task: Task, p: Prescription) -> float:
     s = task.spec
     if not d["efl"] or d["efl"] <= 0:
         return math.inf
+    if None in (d.get("hfov_deg"), d.get("fno"), s.get("hfov_deg"), s.get("fno"), s.get("ttl_max")):
+        return math.inf
+    if not d.get("ttl") or not math.isfinite(d["ttl"]):
+        return math.inf
     dist = abs(d["hfov_deg"] - s["hfov_deg"]) / 10 + abs(d["fno"] - s["fno"]) / 0.5
     dist += abs(d["ttl"] / d["efl"] - s["ttl_max"] / s["efl"]) / 0.2
     if task.constraints.get("max_elements") and d["n"] > task.constraints["max_elements"]:
@@ -80,7 +84,12 @@ def nearest(task: Task, corpus: list[Prescription]) -> tuple[Prescription, dict]
     best = min(pool, key=lambda p: spec_distance(task, p))
     with quiet():
         op, _ = build_optic(prepare(best, task), fno=task.spec["fno"], hfov_deg=task.spec["hfov_deg"], fields=(0.0,))
-        k = task.spec["efl"] / float(op.paraxial.f2())
+        efl_seed = float(op.paraxial.f2())
+    if not math.isfinite(efl_seed) or efl_seed == 0:
+        raise RuntimeError(f"seed {best.id} has no usable focal length")
+    k = task.spec["efl"] / efl_seed
+    if k <= 0:
+        raise RuntimeError(f"seed {best.id} focal length {efl_seed:.4g} has the wrong sign for the target")
     cand = prepare(best.scaled(k, new_id=f"nearest:{best.id}@x{k:.3f}"), task)
     if math.isfinite(best.surfaces[0].thickness):
         # seed was designed for a finite object: move the image plane to the

@@ -118,8 +118,9 @@
      },
      "aspheric": {
       "type": "object",
+      "additionalProperties": false,
       "patternProperties": {
-       "^A[0-9]+$": {
+       "^A([468]|[1-9][02468])$": {
         "type": "number"
        }
       }

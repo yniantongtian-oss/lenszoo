@@ -120,6 +120,31 @@ def _clean_name(s: str) -> str:
     return s
 
 
+def _name_keys(name: str) -> set[str]:
+    """Names that should resolve to this surface in an asphere table.
+
+    Patents write the stop as ``2(APE)``, ``9(ST)`` or ``STO+S1`` in the
+    surface table and as ``2`` / ``S2`` / ``S1`` in the coefficient table.
+    Exact names always win; aliases are used only when they are unambiguous.
+    """
+    raw = _clean_name(name)
+    if not raw:
+        return set()
+    keys = {raw}
+    base = re.sub(r"\([^)]*\)", "", raw)
+    pieces = [base, *re.split(r"[+/&]", base)]
+    for part in pieces:
+        part = part.strip()
+        if not part:
+            continue
+        keys.add(part)
+        if part.isdigit():
+            keys.add("S" + part)
+        elif part.startswith("S") and part[1:].isdigit():
+            keys.add(part[1:])
+    return {key for key in keys if key}
+
+
 _STOP_RX = re.compile(r"(STO|STOP|\(ST\)|^ST$|\(S\)|APE|\u5149\u9611|\u5b54\u5f84)")
 
 
@@ -193,7 +218,29 @@ def apply_aspheric(surfs: list[Surface], rows: list[list[str]]) -> list[str]:
     hdr = aspheric_header(rows[0])
     if hdr is None:
         return ["not an aspheric table"]
-    byname = {s.name: s for s in surfs}
+    exact = {s.name: s for s in surfs}
+    alias: dict[str, Surface] = {}
+    ambiguous: set[str] = set()
+    for s in surfs:
+        for key in _name_keys(s.name):
+            if key in exact:
+                continue
+            if key in alias and alias[key] is not s:
+                ambiguous.add(key)
+                alias.pop(key, None)
+            elif key not in ambiguous:
+                alias[key] = s
+
+    def resolve(name: str) -> Surface | None:
+        if name in exact:
+            return exact[name]
+        for key in _name_keys(name):
+            if key in exact:
+                return exact[key]
+            if key in alias:
+                return alias[key]
+        return None
+
     for r in rows[1:]:
         if not r:
             continue
@@ -202,11 +249,7 @@ def apply_aspheric(surfs: list[Surface], rows: list[list[str]]) -> list[str]:
             hdr = h2
             continue
         name = _clean_name(r[0])
-        tgt = byname.get(name)
-        if tgt is None:
-            # 'S1A' style or numeric names
-            alt = "S" + name if name.isdigit() else name
-            tgt = byname.get(alt)
+        tgt = resolve(name)
         if tgt is None:
             if name:
                 warns.append(f"aspheric row {name}: no matching surface")

@@ -57,7 +57,8 @@ def _cell_text(c: str) -> str:
 def table_rows(table_html: str) -> list[list[str]]:
     rows = []
     for tr in re.findall(r"<tr.*?</tr>", table_html, re.S):
-        rows.append([_cell_text(td) for td in re.findall(r"<td[^>]*>(.*?)</td>", tr, re.S)])
+        cells = re.findall(r"<t[dh][^>]*>(.*?)</t[dh]>", tr, re.S)
+        rows.append([_cell_text(td) for td in cells])
     return [r for r in rows if r]
 
 
@@ -222,6 +223,30 @@ class ExtractionReport:
     warnings: list[str] = field(default_factory=list)
 
 
+_CN_DIGITS = "\u4e00\u4e8c\u4e09\u56db\u4e94\u516d\u4e03\u516b\u4e5d"
+_CN_TEN = "\u5341"
+
+
+def embodiment_number(token: str) -> int | None:
+    """Parse an embodiment index written with Arabic or Chinese numerals."""
+    e = token.strip()
+    if e.isdigit():
+        return int(e)
+    if not e or any(ch not in _CN_DIGITS + _CN_TEN for ch in e):
+        return None
+    if e == _CN_TEN:
+        return 10
+    if e.startswith(_CN_TEN) and len(e) == 2 and e[1] in _CN_DIGITS:
+        return 10 + _CN_DIGITS.index(e[1]) + 1
+    if e.endswith(_CN_TEN) and len(e) == 2 and e[0] in _CN_DIGITS:
+        return (_CN_DIGITS.index(e[0]) + 1) * 10
+    if len(e) == 3 and e[1] == _CN_TEN and e[0] in _CN_DIGITS and e[2] in _CN_DIGITS:
+        return (_CN_DIGITS.index(e[0]) + 1) * 10 + _CN_DIGITS.index(e[2]) + 1
+    if len(e) == 1 and e in _CN_DIGITS:
+        return _CN_DIGITS.index(e) + 1
+    return None
+
+
 def _description(page: str) -> str:
     i = page.find('itemprop="description"')
     if i < 0:
@@ -265,15 +290,7 @@ def extract_page(page: str, pub: str) -> ExtractionReport:
         found = re.findall(r"(?:\u5b9e\u65bd\u4f8b|\u4f8b\u5b50|\u5b9e\u65bd\u65b9\u5f0f|\u793a\u4f8b)\s*([0-9]+|[\u4e00\u4e8c\u4e09\u56db\u4e94\u516d\u4e03\u516b\u4e5d\u5341]+)", _text(desc[max(0, pos - window): pos]))
         if not found:
             return None
-        e = found[-1]
-        cn = "\u4e00\u4e8c\u4e09\u56db\u4e94\u516d\u4e03\u516b\u4e5d\u5341"
-        if e.isdigit():
-            return int(e)
-        if len(e) == 1 and e in cn:
-            return cn.index(e) + 1
-        if e.startswith("\u5341") and len(e) == 2:
-            return 10 + cn.index(e[1]) + 1
-        return None
+        return embodiment_number(found[-1])
 
     surf_emb = {ti: emb_before(tables[ti][0]) for ti in surf_idx}
     asph_idx = [k for k, t in enumerate(tables) if t[2] and aspheric_header(t[2][0]) and k not in surf_idx]
@@ -341,7 +358,7 @@ def extract_page(page: str, pub: str) -> ExtractionReport:
                     "date": meta["date"], "embodiment": emb_no or n + 1,
                     "table": _table_label(cap.group(1)) if cap else None, "pdf_url": meta["pdf_url"]},
             claimed=claimed,
-            provenance={"method": "google_patents_text_table", "extractor": "lenszoo.extract.gpatents 0.1",
+            provenance={"method": "google_patents_text_table", "extractor": "lenszoo.extract.gpatents 0.2",
                         "aspheric_tables": len(asph_used), "warnings": warns},
         )
         rep.prescriptions.append(p)

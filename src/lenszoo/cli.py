@@ -4,6 +4,9 @@
   lenszoo verify FILE.json [...] [--write]                 ray-trace checksum verification
   lenszoo fixes FILE.json                                  suggest single-edit OCR fixes that restore EFL
   lenszoo list [--designs data/designs]                    corpus summary
+  lenszoo audit [--designs data/designs] [--write FILE]    structural audit, no ray trace
+  lenszoo search --efl 4.04 [--fno 2.2] [--hfov 36.4]      nearest usable designs
+  lenszoo mcp                                              MCP stdio server (verify, score, search)
   lenszoo bench score TASK.json CANDIDATE.json             score one candidate
   lenszoo bench run [--agent nearest_opt] [--only T01,T02] [--out results/x.json]
   lenszoo bench prompt TASK.json                         print the agent prompt
@@ -78,7 +81,13 @@ def cmd_list(a):
 
     rows = []
     for f in sorted(Path(a.designs).rglob("*.json")):
-        p = Prescription.load(f)
+        if f.suffix != ".json" or f.name.startswith("TRIAGE"):
+            continue
+        try:
+            p = Prescription.load(f)
+        except Exception as exc:
+            print(f"  ! {f.name}: {exc.__class__.__name__}", file=sys.stderr)
+            continue
         rows.append((p.verification.get("status", "?"), p.id, p.lens_count(), p.claimed.get("efl"), p.claimed.get("fno"),
                      p.claimed.get("hfov_deg"), round(p.ttl(), 3), p.source.get("assignee", "")[:28]))
     from collections import Counter
@@ -91,6 +100,41 @@ def cmd_list(a):
         for r in rows:
             if r[0] in ("verified", "verified_refined", "plausible"):
                 print(*r, sep="\t")
+    return 0
+
+
+def cmd_audit(a):
+    from .corpus import audit, render_triage
+
+    report = audit(Path(a.designs))
+    if a.write:
+        path = Path(a.write)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(render_triage(report), encoding="utf-8")
+        print(f"wrote {path}")
+    print(f"designs {report['designs']}  errors {len(report['errors'])}")
+    print("status", report["by_status"])
+    print("needs_review", report["needs_review_primary"])
+    for err in report["errors"]:
+        print(f"  ! {err['path']}: {err['error']}")
+    return 1 if report["errors"] else 0
+
+
+def cmd_search(a):
+    from .corpus import search_designs
+
+    rows = search_designs(
+        Path(a.designs), efl=a.efl, fno=a.fno, hfov_deg=a.hfov,
+        ttl_max=a.ttl, max_elements=a.max_elements, limit=a.limit,
+    )
+    print(json.dumps(rows, indent=1, ensure_ascii=False))
+    return 0
+
+
+def cmd_mcp(_a):
+    from .mcp_server import serve
+
+    serve()
     return 0
 
 
@@ -164,6 +208,18 @@ def main(argv=None) -> int:
     ls = sub.add_parser("list")
     ls.add_argument("--designs", default="data/designs")
     ls.add_argument("--all", action="store_true")
+    au = sub.add_parser("audit")
+    au.add_argument("--designs", default="data/designs")
+    au.add_argument("--write", help="write the triage markdown to this path")
+    se = sub.add_parser("search")
+    se.add_argument("--efl", type=float, required=True)
+    se.add_argument("--fno", type=float, default=2.0)
+    se.add_argument("--hfov", type=float, default=30.0)
+    se.add_argument("--ttl", type=float)
+    se.add_argument("--max-elements", type=int)
+    se.add_argument("--limit", type=int, default=5)
+    se.add_argument("--designs", default="data/designs")
+    sub.add_parser("mcp")
     b = sub.add_parser("bench")
     bs = b.add_subparsers(dest="bench_cmd", required=True)
     br = bs.add_parser("run")
@@ -179,7 +235,10 @@ def main(argv=None) -> int:
     pr = bs.add_parser("prompt")
     pr.add_argument("task")
     a = ap.parse_args(argv)
-    return {"extract": cmd_extract, "verify": cmd_verify, "fixes": cmd_fixes, "list": cmd_list, "bench": cmd_bench}[a.cmd](a)
+    return {
+        "extract": cmd_extract, "verify": cmd_verify, "fixes": cmd_fixes, "list": cmd_list,
+        "audit": cmd_audit, "search": cmd_search, "mcp": cmd_mcp, "bench": cmd_bench,
+    }[a.cmd](a)
 
 
 if __name__ == "__main__":
