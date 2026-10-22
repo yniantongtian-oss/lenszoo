@@ -154,7 +154,11 @@ def verify(p: Prescription, refine: bool = True, **kw) -> dict:
     status = "verified" if all(v["pass"] for v in checks.values()) else "needs_review"
     out = {"status": status, "checks": checks, "metrics": _round(m), "tolerances": TOL}
     if status != "verified" and refine:
-        r = refine_indices(p, fno=m["fno"], hfov=m["hfov_deg"])
+        try:
+            r = refine_indices(p, fno=m["fno"], hfov=m["hfov_deg"])
+        except Exception as exc:
+            r = None
+            warns.append(f"index refinement failed: {exc.__class__.__name__}")
         if r:
             q, nd_map = r
             m2 = evaluate(q, fno=m["fno"], hfov=m["hfov_deg"], **{k: v for k, v in kw.items() if k not in ("fno", "hfov")})
@@ -169,8 +173,13 @@ def verify(p: Prescription, refine: bool = True, **kw) -> dict:
         warns.append("patent text gives no EFL for this embodiment: first-order checksum unavailable")
     if any("no aspheric-coefficient table" in w or "truncated" in w for w in warns):
         out["status"] = "needs_review"
-    if not math.isfinite(m["rms_um_mean"]):
-        out["status"] = "failed" if out["status"] == "needs_review" and "refined" not in out else out["status"]
+    # Untraceable designs stay failed even when index refinement was attempted
+    # and also failed to trace. Previously any refinement attempt suppressed
+    # the failed label and left a dead prescription in needs_review.
+    ref_rms = ((out.get("refined") or {}).get("metrics") or {}).get("rms_um_mean")
+    refined_traced = isinstance(ref_rms, (int, float)) and math.isfinite(ref_rms)
+    if out["status"] not in ("verified", "verified_refined", "plausible") and not math.isfinite(m["rms_um_mean"]) and not refined_traced:
+        out["status"] = "failed"
     out["notes"] = warns
     out["failed_checks"] = [k for k, v in (out.get("refined", {}).get("checks") or checks).items() if not v["pass"]]
     p.verification = out

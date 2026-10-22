@@ -14,14 +14,14 @@ LensZoo does three things:
 2. **verify**: rebuilds every design in [Optiland](https://github.com/optiland/optiland) and checks it against the patent's own numbers (EFL, TTL, ImgH, focus, image quality). A transcription error almost always breaks at least one of these. Each design is labelled `verified`, `verified_refined`, `plausible`, `needs_review` or `failed`.
 3. **bench**: lens-design tasks with a deterministic Optiland scorer (geometric MTF plus constraint penalties) and two baselines. Patent-spec tasks hide their source patent from the agent.
 
-> Status: v0.1.0. The corpus counts below describe the files included in this release. Benchmark results are recorded in `results/`.
+> Status: v0.2.0. The corpus counts below describe the files included in this release. `needs_review/` was triaged and left in place: no embodiment passes the gates. See [data/designs/TRIAGE.md](data/designs/TRIAGE.md). Benchmark results are recorded in `results/`.
 
 ## What works today (real outputs)
 
 ```
-$ pip install -e .            # Python 3.11+, pulls optiland 0.6.x (tested with 0.6.2)
+$ pip install -e ".[dev]"     # Python 3.11+, optiland 0.6.3 (tested)
 $ pytest -q
-13 passed
+$ lenszoo audit               # folder / status / failed_checks, no ray trace
 
 $ lenszoo extract CN105116519B          # uses the cached page in data/raw if present
 CN105116519B: 12 text prescription table(s), 0 image-only table(s)
@@ -69,7 +69,7 @@ The baselines are weak on purpose. With 6 usable seeds and the source patent exc
 * About 6% of ~700 CN lens patents probed on Google Patents had a surface table in text. The rest are images (`patent-image-not-available` or `BDA*.png`). **OCR or a VLM is mandatory at scale.**
 * Asphere tables are text more often than surface tables, and are sometimes split across a page break into a header-less continuation table. The extractor merges these.
 * **Two-decimal indices** (1.54/56.1) alone shift EFL by about 1.5–2% and defocus an F/2 lens by about 0.1 mm. Without index recovery, an honest checker would reject correct designs.
-* Optiland 0.6.2 loses whole rays on strong phone aspheres. The Newton intersection seeds from the base conic, which steep rays can miss, and one NaN ray stops early exit for every ray. `lenszoo/verify/_patches.py` fixes both (5× faster, rays recovered) and is a candidate upstream PR.
+* Optiland 0.6.3 still loses whole rays on strong phone aspheres. The Newton intersection seeds from the base conic, which steep rays can miss, and one NaN ray stops early exit for every ray. `lenszoo/verify/_patches.py` fixes both inside `_solve_distance_primal` and leaves the 0.6.3 aperture and torch paths in place. It is a candidate upstream PR. On CN105116519B ex.1 the patch drops lost rays from 762 to 28 in a 6-ring polychromatic trace.
 * Bare glass names are ambiguous in Optiland: `"F2"` is not Schott F2. The schema supports `"F2|schott"`.
 * Google Patents rate-limits scripted access. After about 720 page fetches in one session the sandbox got HTTP 503 "Sorry…". `patentimages.storage.googleapis.com` (PDFs and figures) returned 403 from the sandbox.
 
@@ -78,6 +78,9 @@ The baselines are weak on purpose. With 6 usable seeds and the source patent exc
 ```bash
 pip install -e ".[dev]"
 lenszoo list                                  # corpus summary (usable designs)
+lenszoo audit [--write data/designs/TRIAGE.md]  # structural audit, no ray trace
+lenszoo search --efl 4.04 --fno 2.2 --hfov 36.4 # nearest usable designs
+lenszoo mcp                                   # MCP stdio server for agents
 lenszoo verify data/designs/verified/*.json   # re-run checks
 lenszoo fixes some_design.json                # single-edit OCR fix suggestions
 lenszoo extract CN105116519B --out data/designs/new
@@ -121,7 +124,7 @@ Full JSON Schema: [schema/prescription.schema.json](schema/prescription.schema.j
 
 * Only 6 designs are usable today. The corpus is a pipeline demo, not yet a dataset.
 * The image-quality check assumes F/2.0 and 30° when the patent text states neither. The full field may be vignetted because patents omit clear apertures.
-* Why CN105116519B ex4–ex12 fail (EFL and TTL match, but defocus is 0.13–0.22 mm) is **not yet explained**. ex10's S9 row duplicates ex9's and ex11's duplicates ex1's, which points to copy errors in the published text, but this is unconfirmed.
+* CN105116519B ex5 and ex11 match EFL and TTL, but the published image plane is about 0.20 mm short of paraxial focus. Moving it restores ~4 µm spots and breaks the TTL checksum, so both files stay `needs_review`. ex4 and ex7–ex10 do not refocus (RMS stays hundreds of micrometres). ex10's S9 row still duplicates another embodiment. Detail is in [data/designs/TRIAGE.md](data/designs/TRIAGE.md).
 * Odd-order (Fujifilm KA/Am) and Forbes aspheres are not supported yet.
 * Not legal advice. Patents may be in force; see the disclaimer below and [data/README.md](data/README.md).
 
@@ -137,8 +140,11 @@ src/lenszoo/extract/          gpatents.py (HTML tables), tables.py (row parser),
 src/lenszoo/verify/           build.py (-> Optiland), metrics.py, check.py (checksums, nd refinement, fix finder), _patches.py
 src/lenszoo/bench/            tasks.py, scorer.py, baseline.py
 src/lenszoo/cli.py            `lenszoo` command
+src/lenszoo/corpus.py         audit, triage, spec search (no ray trace)
+src/lenszoo/mcp_server.py     MCP stdio adapter over verify, score, search
 data/designs/{verified,plausible,needs_review,failed}/   161 extracted embodiments
+data/designs/TRIAGE.md        why needs_review was not promoted
 data/tasks/                   14 benchmark tasks
 results/                      baseline runs, quickstart output
-tests/                        pytest suite (13 tests)
+tests/                        pytest suite (53 tests)
 ```

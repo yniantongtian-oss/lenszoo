@@ -47,7 +47,14 @@ def build_optic(p: Prescription, fno: float | None = None, hfov_deg: float | Non
     op = _optic.Optic()
     rows = p.surfaces
     has_stop = any(s.is_stop for s in rows)
-    first_refr = next(i for i, s in enumerate(rows) if s.role == "surface")
+    try:
+        first_refr = next(i for i, s in enumerate(rows) if s.role == "surface")
+    except StopIteration:
+        try:
+            first_refr = next(i for i, s in enumerate(rows) if s.role == "stop")
+        except StopIteration as exc:
+            raise ValueError("prescription has no optical surface") from exc
+        assumptions.append("no refracting surface: stop used as the first optical surface")
     stop_at = first_refr
     if not has_stop:
         # an unlabeled plane air/air surface between lenses is the aperture stop
